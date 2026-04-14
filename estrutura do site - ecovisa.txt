@@ -1,0 +1,401 @@
+================================================================================
+ECOVISA — ESTRUTURA COMPLETA DO SITE (REFERÊNCIA PARA COPY / REVISÃO DE CONTEÚDO)
+================================================================================
+Documento sincronizado com o código (index.html + js/app.js).
+Última revisão estrutural: abril/2026.
+
+Uso: análise de texto, tom de voz, consistência e sugestões de melhoria.
+
+--------------------------------------------------------------------------------
+1. VISÃO GERAL
+--------------------------------------------------------------------------------
+
+• Tipo: site estático em uma única página (SPA leve): todo o conteúdo está em
+  index.html; a navegação troca “telas” via hash na URL (ex.: #/ambiental).
+
+• Título da aba (meta <title>): Ecovisa — Inteligência que vê, agilidade que entrega
+
+• Idioma: pt-BR
+
+• Proposta central (marca): Visão computacional sobre câmeras existentes; PoC;
+  verticais (Ambiental, Industrial, Logística, Smart Cities); integração sem troca
+  obrigatória de hardware.
+
+• Rodapé — tagline: “Visão Computacional para o Amanhã.”
+
+• Copyright no rodapé: Copyright 2026 Ecovisa.
+
+• Layout das verticais (padrão atual): cada vertical tem hero em grade
+  (vertical-hero__grid) com texto à esquerda e bloco de mídia à direita — imagem com
+  efeito de “scan”, badges contextuais (ex.: OEE, Docas) e faixa decorativa. A ordem
+  das seções internas é unificada: Hero → Desafios → Módulos → Escopo (ODS/conformidade)
+  → Implantação + PoC.
+
+--------------------------------------------------------------------------------
+2. NAVEGAÇÃO E ROTAS (SITEMAP LÓGICO)
+--------------------------------------------------------------------------------
+
+Base: arquivo index.html. URLs efetivas (fragmento após #):
+
+  /                    → Página inicial (home)
+  /ambiental           → Vertical Ambiental
+  /industrial          → Vertical Industrial
+  /logistica           → Vertical Logística
+  /smart-cities        → Vertical Smart Cities
+  /tecnologia          → Página Tecnologia
+  /sobre               → Página Sobre (missão, visão, equipe)
+  /contato             → Formulário Agendar PoC / contato
+
+Observação técnica: rotas inválidas no hash voltam para a home ("").
+
+--------------------------------------------------------------------------------
+3. MENU PRINCIPAL (DESKTOP)
+--------------------------------------------------------------------------------
+
+Ordem e rótulos:
+
+  • Inicial                    → rota: (vazia) = home
+  • Segmentos (dropdown):
+      – Ambiental              subtexto: coleta, gestão e reciclagem de resíduos
+      – Industrial             subtexto: controle de qualidade e otimização de processos
+      – Logística              subtexto: inspeção automatizada e gestão de cargas
+      – Smart cities           subtexto: monitoramento veicular e fluxo de pessoas
+  • Tecnologia
+  • Sobre
+  • Agendar PoC (botão primário)
+
+--------------------------------------------------------------------------------
+4. MENU MOBILE (DRAWER)
+--------------------------------------------------------------------------------
+
+  Inicial | Segmentos (rótulo estático) | Ambiental | Industrial | Logística |
+  Smart Cities | Tecnologia | Sobre | Agendar PoC
+
+--------------------------------------------------------------------------------
+5. RODAPÉ
+--------------------------------------------------------------------------------
+
+Coluna 1: logo placeholder + “Visão Computacional para o Amanhã.”
+
+Coluna “Verticais” (links): Ambiental | Industrial | Logística | Smart Cities
+
+Coluna “Redes sociais”:
+  • Youtube: https://www.youtube.com/@ecovisa_tech
+  • Instagram: https://www.instagram.com/ecovisa.tech
+
+Linha inferior:
+  • Copyright 2026 Ecovisa.
+  • Políticas de Privacidade (link # — placeholder)
+  • Termos de Uso (link # — placeholder)
+
+--------------------------------------------------------------------------------
+6. PÁGINA INICIAL (HOME) — CONTEÚDO POR SEÇÃO
+--------------------------------------------------------------------------------
+
+6.1 Hero
+  • Kicker: “A Promessa Única”
+  • H1: Sua infraestrutura de vídeo já grava o passado. Nós auditamos o seu presente.
+  • Lead: Transforme câmeras passivas em uma rede de inteligência ativa. A Ecovisa
+    utiliza Visão Computacional de alta precisão para identificar gargalos, garantir
+    segurança e recuperar margem operacional em tempo real.
+  • CTAs: “Iniciar Prova de Conceito (Custo Zero)” | “Agendar uma reunião” (ambos → contato)
+  • Área visual: placeholder com texto “(inserir imagem)”; elementos de UI de exemplo
+    (Status: Ocioso, Nível: 85%).
+
+6.2 Faixa de valor
+  • Texto: Transformamos sua infraestrutura atual em uma operação inteligente. Sem troca
+    de hardware, sem burocracia, com retorno validado em tempo recorde.
+
+6.3 Bloco de problema
+  • H2: Você está sentado sobre uma mina de ouro de dados — e ela está desligada.
+  • Parágrafo: Câmeras de segurança comuns apenas registram incidentes depois que o
+    prejuízo ocorreu. [continua sobre custo de oportunidade, OPEX, “cegueira operacional”.]
+
+6.4 Plataforma única
+  • H2: Uma única plataforma. Infinitas camadas de inteligência.
+  • Parágrafo: Não troque seu hardware. Integramos nossa IA ao CFTV atual; quatro verticais.
+
+6.5 “O Prejuízo Invisível” (3 cards)
+  • 99% das Imagens Descartadas — Horas de vídeo que não viram dado acionável.
+  • Riscos Operacionais Ocultos — Falhas e passivos antes visíveis só depois do estrago.
+  • Perda de Receita por Ineficiência — Gargalos invisíveis comendo margem todos os dias.
+
+6.6 Plataforma Ecovisa (fluxo)
+  • H2: Plataforma Ecovisa
+  • Linha: Capture (Câmeras do Cliente) → Analise (IA Ecovisa) → Aja (Alertas/Dashboards)
+  • Fluxo visual: Capture | Analise | Aja (repetido em steps)
+  • Placeholder: “(inserir imagem)”
+
+6.7 Nossas Verticais (4 cards clicáveis → cada vertical)
+  • Ambiental — Otimização da gestão de resíduos — Compliance e rastreabilidade com visão 24/7. — Saiba Mais →
+  • Industrial — Ganho efetivo de produtividade — OEE, qualidade e segurança sem parar a linha.
+  • Logística — Monitoramento preciso e 24/7 — Pátio, docas e integridade de carga.
+  • Smart Cities — Visão para cidades inteligentes — Mobilidade, segurança e zeladoria com dados.
+
+6.8 Diferencial transversal
+  • H2: Diferencial Transversal: Produtividade & IA Visual
+  • Texto: Produtividade redefinida com IA Visual. Transformamos dados de imagem em decisões
+    operacionais, otimizando fluxos e liberando a equipe para tarefas estratégicas.
+  • CTA: Agendar PoC
+  • Placeholder imagem: “(inserir imagem)”
+
+6.9 Modelo de engajamento (timeline 3 passos)
+  • H2: Modelo de Engajamento (A PoC)
+  • Passo 1: Diagnóstico (Sem Custo).
+  • Passo 2: PoC 3 Meses (Validação).
+  • Passo 3: Proposta Comercial (Escala).
+
+6.10 FAQ (perguntas e respostas — acordeão)
+  1) Preciso trocar minhas câmeras ou comprar hardware novo?
+     R: Não troque seu hardware. Integração IA + CFTV; quatro verticais.
+  2) Como funciona o modelo de engajamento em três passos?
+     R: Passo 1 Diagnóstico sem custo; Passo 2 PoC 3 meses; Passo 3 proposta comercial.
+  3) Como a plataforma entrega valor para a operação?
+     R: Capture → Analise → Aja (mesma linha da seção plataforma).
+  4) A solução trata dados e imagens com responsabilidade?
+     R: Segurança de Dados e LGPD. (texto muito breve)
+  5) Quanto tempo dura a PoC e quando aparecem resultados?
+     R: PoC 90 dias; resultados nas primeiras 4 semanas.
+  6) Integração com sistemas que já usamos?
+     R: Integração com ERPs/APIs (JSON).
+
+6.11 CTA final
+  • H2: Vamos transformar suas imagens em dados? Inicie sua POC.
+  • Botão: Agendar PoC
+
+--------------------------------------------------------------------------------
+7. VERTICAL AMBIENTAL — CONTEÚDO (ORDEM DAS SEÇÕES)
+--------------------------------------------------------------------------------
+
+Hero (grid + mídia)
+  • Eyebrow: Ecovisa Ambiental
+  • H1: Transparência total do descarte ao destino final.
+  • Lead: Maximize a pureza dos materiais e garanta conformidade normativa com auditoria
+    visual 24/7.
+  • CTA: Iniciar Prova de Conceito (Custo Zero)
+  • Mídia: imagem local imagens/ambiental/ambiental - modulo triagem.png
+    Alt: “Triagem de resíduos com visão computacional e auditoria visual Ecovisa”
+  • Badges sobre a imagem: “Triagem” | “NR 38”
+
+Seção Desafios (rótulo “Diagnóstico”)
+  • Incerteza na Triagem — triagem manual lenta → contaminação cruzada, perda de valor.
+  • Risco de Compliance — sem dados visuais, “buraco negro”; menção NR 38.
+  • Ociosidade Oculta — falta de controle em transbordo/aterros.
+
+Seção Módulos (imagens em imagens/ambiental/)
+  • Transbordo — tempo de descarregamento, ociosidade de caminhões, preenchimento, etc.
+  • Coleta — materiais não autorizados, quantidade de lixeiras, não conformidade, etc.
+  • Triagem — produtividade nas esteiras, por trabalhador, ritmo, segurança/ergonomia,
+    classificação, rejeito, etc.
+  • Uso de EPI e comportamento desviantes — TEXTO PLACEHOLDER: “(Adicionar descrição do módulo)”
+    (imagem: modulo seguranca.png)
+
+Seção Escopo — “Alinhamento com ODS e conformidade” (painel único com três parágrafos)
+  • ODS 8, 9, 11, 12.
+  • NR 38 e políticas de logística reversa.
+  • Benefícios: rastreabilidade, redução de rejeitos, créditos de carbono.
+
+Implantação + PoC (split)
+  • Implantação: IA nos pontos críticos da triagem; até 15 dias; dashboards sem novos sensores.
+  • PoC: 90 dias sem custos; resultados em 4 semanas. CTA Agendar PoC.
+
+--------------------------------------------------------------------------------
+8. VERTICAL INDUSTRIAL — CONTEÚDO (ORDEM DAS SEÇÕES)
+--------------------------------------------------------------------------------
+
+Hero (grid + mídia)
+  • Eyebrow: Ecovisa Industrial
+  • H1: Onde o olho humano falha, nossa IA acelera.
+  • Lead: Reduza o tempo de ciclo e elimine riscos de acidentes com supervisão computacional
+    autônoma.
+  • CTA: Agendar POC de 3 meses
+  • Mídia: imagens/industrial/industrial - modulo produtividade e controle.png
+    Alt: “Linha industrial com visão computacional Ecovisa — produtividade e controle”
+  • Badges: “OEE” | “Qualidade”
+
+Desafios (rótulo “Chão de fábrica”)
+  • Gargalos Invisíveis
+  • Segurança Falível — EPIs, áreas de risco, passivos.
+  • Cegueira Operacional — vídeo que não alimenta decisão rápida sobre OEE.
+
+(O bloco de ODS/normas que antes aparecia como parágrafo após os desafios foi movido
+para a seção Escopo abaixo.)
+
+Módulos (imagens em imagens/industrial/)
+  • Produtividade e controle — texto longo (esteira, ociosidade, perdas, alertas, raio-x).
+  • Controle de Qualidade Visual — defeitos, automação, banco de defeitos, etc.
+  • Segurança e prevenção de acidentes e incidentes — alertas, dados de segurança.
+  • Comportamento de clientes e usuários — PLACEHOLDER: “(Adicionar descrição do módulo)”
+
+Seção Escopo — “Alinhamento com ODS e conformidade” (um parágrafo no painel)
+  • ODS aplicáveis: 9 (Inovação), 12 (Produção responsável), 8 (Trabalho decente).
+  • Normas: ISO 9001, ISO 45001, NR-12.
+  • Benefícios: detecção em tempo real, retrabalho, segurança de operadores, auditoria sem
+    parar a linha.
+
+Implantação + PoC
+  • Implantação: integração com VMS; sem novos sensores.
+  • PoC: implementação gratuita até 3 meses para validar eficiência.
+
+--------------------------------------------------------------------------------
+9. VERTICAL LOGÍSTICA — CONTEÚDO (ORDEM DAS SEÇÕES)
+--------------------------------------------------------------------------------
+
+Hero (grid + mídia)
+  • Eyebrow: Ecovisa Logística
+  • H1: Sua operação não pode parar por falta de visão.
+  • Lead: Câmeras passivas → ferramentas de auditoria ativa; transbordo e pátio.
+  • CTA: Agendar PoC
+  • Mídia: imagem externa (Unsplash — armazém/docas), não é arquivo local do repositório.
+    Alt: “Centro de distribuição e docas — monitoramento visual para pátio e carga”
+  • Badges: “Docas” | “SLA”
+
+Os Desafios (rótulo “Operação”)
+  • Ineficiência no Pátio — tempos de carga/descarga, filas, ociosidade.
+  • Falhas na Conferência — contagem manual, erros, cross-docking.
+  • Risco à Integridade — avarias, acessos não autorizados.
+
+(O parágrafo de ODS/conformidade que estava logo após os desafios foi unificado na
+seção Escopo após os módulos.)
+
+Módulos (ainda com placeholder “inserir imagem” nos três)
+  • Otimização de Docas e Pátio — tempos médios, alertas SLA, veículos ociosos.
+  • Conferência Automatizada de Carga — volumes, logotipos, integridade no cross-docking.
+  • Vigilância de Ativos e Integridade — avarias, acessos; prova digital.
+
+Seção Escopo — “Alinhamento com ODS e conformidade”
+  • ODS 9 e 11.
+  • Lei do Motorista (fadiga); ABNT NBR 14619.
+  • Benefícios: avarias, docas com predição de horários, furtos, rastreamento visual de ativos.
+
+Implantação + PoC
+  • Implantação: IA + CFTV; APIs ou dashboards.
+  • PoC: 90 dias, implementação simplificada.
+
+--------------------------------------------------------------------------------
+10. VERTICAL SMART CITIES — CONTEÚDO (ORDEM DAS SEÇÕES)
+--------------------------------------------------------------------------------
+
+Hero (grid + mídia)
+  • Eyebrow: Ecovisa Smart Cities
+  • H1: Cidades que veem, cidades que agem.
+  • Lead: Inteligência visual para fluxos urbanos e elevar a segurança do cidadão.
+  • CTA: Agendar PoC
+  • Mídia: imagens/smart cities/smart cities - modulo analise de transito.png
+    Alt: “Fluxo urbano e análise de trânsito com visão computacional Ecovisa”
+  • Badges: “Tráfego” | “CICC”
+
+Os Desafios (rótulo “Território”)
+  • Gestão às Cegas — falta de dados dinâmicos sobre fluxo de pessoas e veículos.
+  • Imagens Mortas — câmeras que gravam o passado sem decisão imediata.
+  • Zeladoria Reativa — lixo irregular, falhas em ativos públicos.
+
+Módulos (pasta imagens/smart cities/ — 4 com imagem + 1 só texto)
+  • Análise de Trânsito/Fluxo em ruas e avenidas — pedestres, veículos, otimização pública.
+  • Análise de cruzamentos e interseções ferroviárias — fluxo, anomalias, alertas.
+  • Controle de ocupação de vagas públicas — fluxos, cruzamento de dados.
+  • Detecção de Invasão de Faixa (Vegetação) — vegetação perto de ativos; poda.
+  • Inspeção de Integridade de Ativos — corrosão, isoladores, anomalias térmicas; câmeras ou drones.
+    (sem imagem no layout — módulo texto only)
+
+Seção Escopo — “Alinhamento com ODS e conformidade” (após os módulos)
+  • ODS 11 e 9.
+  • ISO 37122; LGPD para imagens.
+  • Benefícios: congestionamentos, acidentes, zeladoria (lixo, podas, iluminação), economia pública.
+
+Implantação + PoC
+  • Implantação: rede municipal (CICC); dashboards.
+  • PoC: até 90 dias sem custos iniciais de licenciamento.
+
+--------------------------------------------------------------------------------
+11. PÁGINA TECNOLOGIA
+--------------------------------------------------------------------------------
+
+Cabeçalho escuro
+  • Kicker: “Página 06” (referência de wireframe — revisar para produção)
+  • H1: Tecnologia
+
+Corpo
+  • H2: Explicação do “Cérebro” Ecovisa. + placeholder “(inserir imagem)”
+  • H2: Solução agnóstica — hardware agnóstico; fluxo Capture → IA → Insight/API/ERP; PoC 3 meses.
+  • H2: Segurança de Dados e LGPD. — parágrafo espelhado (duplicado; expandir)
+  • H2: Integração com ERPs/APIs (JSON). — parágrafo espelhado (expandir)
+
+--------------------------------------------------------------------------------
+12. PÁGINA SOBRE
+--------------------------------------------------------------------------------
+
+Cabeçalho
+  • Kicker: Página 07 — Sobre
+  • H1: Ecovisa
+  • Linha: Missão, Visão e Equipe.
+
+Corpo
+  • Missão: Democratizar a visão computacional para PMEs e órgãos públicos com implementação
+    rápida e foco em ROI.
+  • Visão: Ser o cérebro por trás de cada câmera de segurança nas indústrias e cidades da
+    América Latina.
+  • Equipe: “(inserir imagem)” + hint: “Fotos e bios da equipe — conteúdo a publicar.”
+
+--------------------------------------------------------------------------------
+13. PÁGINA CONTATO / AGENDAR POC
+--------------------------------------------------------------------------------
+
+Cabeçalho
+  • Kicker: Página 08 — Contato / Landing Page de PoC
+  • H1: Agendar PoC
+  • Texto: Preencha os campos abaixo para entrarmos em contato.
+
+Formulário (campos obrigatórios *)
+  • Nome
+  • Empresa
+  • E-mail
+  • Mensagem
+  • Botão: Enviar
+
+Comportamento (front-end apenas): validação; mensagem de sucesso simulada:
+“Recebemos seu envio. Em breve nossa equipe retorna o contato.”
+(Não há envio real a backend documentado no código.)
+
+--------------------------------------------------------------------------------
+14. ELEMENTOS DE MARCA / UI (REFERÊNCIA PARA COPY VISUAL)
+--------------------------------------------------------------------------------
+
+• Logo no header: placeholder com letra “e” (existe também ecovisa logo horizontal
+  fundo verde.png na pasta — pode ser integrado no HTML depois).
+
+• Accent por rota (JS): cores distintas por vertical/página na navegação (--nav-accent).
+
+• CTAs recorrentes: Agendar PoC, Iniciar Prova de Conceito (Custo Zero), Agendar uma reunião.
+
+• Inconsistências de capitalização para revisão: “PoC” vs “POC” em botões diferentes.
+
+• Verticais: hero com imagem real ou stock (Logística usa URL Unsplash); home ainda com
+  placeholder no hero.
+
+--------------------------------------------------------------------------------
+15. LACUNAS E PLACEHOLDERS (CHECKLIST PARA O GERENTE DE COPY)
+--------------------------------------------------------------------------------
+
+• Home hero e várias seções: “(inserir imagem)”; Logística — módulos ainda sem arte local.
+• Ambiental — módulo EPI/comportamento: “(Adicionar descrição do módulo)”.
+• Industrial — módulo comportamento de clientes: “(Adicionar descrição do módulo)”.
+• Tecnologia e Sobre: textos curtos/duplicados; kickers “Página 06/07/08” parecem rótulos
+  de wireframe.
+• FAQ item LGPD: resposta de uma linha — oportunidade de aprofundar.
+• Links Políticas de Privacidade e Termos: href “#” (conteúdo legal pendente).
+• Formulário: copy de privacidade/consentimento (LGPD) não aparece junto ao formulário.
+• Logística: decisão editorial sobre manter imagem stock externa ou trocar por asset da marca.
+
+--------------------------------------------------------------------------------
+16. ARQUIVOS DE SUPORTE NO PROJETO (NÃO INTEGRADOS AO TEXTO ACIMA)
+--------------------------------------------------------------------------------
+
+• documentos/Brandbook Ecovisa.docx
+• documentos/Estrutura do novo site - Ecovisa (1).docx
+
+Estes podem conter diretrizes de marca e estrutura editorial oficial — conferir com o time.
+
+================================================================================
+FIM DO DOCUMENTO
+================================================================================
