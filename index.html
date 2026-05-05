@@ -18,7 +18,7 @@
       <header class="site-header">
         <div class="inner">
           <a href="#/" class="brand" data-route="" aria-label="Ecovisa — Início">
-            <span class="logo-placeholder" aria-hidden="true">e</span>
+            <img src="imagens/ecovisa%20logo%20horizontal%20fundo%20verde.png" alt="Ecovisa" class="brand-logo" />
           </a>
           <nav class="nav-main" aria-label="Principal">
             <button type="button" class="nav-link" data-route="" data-nav="home">
@@ -1478,16 +1478,6 @@
                     </figure>
                   </div>
                 </article>
-                <article class="module-row module-row--text-only reveal">
-                  <div class="module-row__content">
-                    <span class="module-row__tag">Módulo</span>
-                    <h3>Inspeção de Integridade de Ativos</h3>
-                    <p>
-                      Identificação visual de corrosão, isoladores danificados ou anomalias térmicas
-                      através de câmeras fixas ou drones.
-                    </p>
-                  </div>
-                </article>
               </div>
             </div>
           </section>
@@ -1546,25 +1536,166 @@
         <!-- TECNOLOGIA -->
         <article data-view="tecnologia" hidden>
           <section class="section section--dark">
-            <div class="shell">
-              <p class="kicker">Página 06</p>
-              <h1>Tecnologia</h1>
+            <div class="shell grid-2-asym">
+              <div>
+                <h1>Não é mágica. É visão computacional aplicada ao mundo real.</h1>
+                <p class="hero-lead">
+                  A Ecovisa combina modelos de IA treinados para ambientes operacionais reais com a
+                  infraestrutura de câmeras que você já possui. Sem caixas-pretas. Sem promessas vazias.
+                  Só resultado auditável.
+                </p>
+                <button type="button" class="btn btn-primary" data-route="contato">
+                  Agendar PoC gratuita
+                </button>
+              </div>
+              <div>
+                <div class="img-placeholder">
+                  Visual recomendado: câmera de segurança com linhas de análise, bounding boxes e dados.
+                </div>
+              </div>
             </div>
           </section>
+
           <section class="section">
             <div class="shell">
-              <h2>Explicação do “Cérebro” Ecovisa.</h2>
-              <div class="img-placeholder">(inserir imagem)</div>
-              <h2>Solução agnóstica</h2>
-              <p>
-                Solução agnóstica a hardware (funciona com câmeras existentes ou com instalação de
-                câmeras simples), fluxo completo (Capture -&gt; IA -&gt; Insight/API/ERP), e modelo de
-                negócios baseado em PoC de 3 meses.
+              <header class="section-head reveal">
+                <span class="section-head__label">O “Cérebro” Ecovisa</span>
+                <h2>Como a Ecovisa enxerga o que o olho humano não consegue acompanhar</h2>
+              </header>
+              <div class="grid-2-asym">
+                <div>
+                  <p>
+                    Nossa plataforma aplica modelos de visão computacional sobre o fluxo de vídeo em tempo
+                    real. Cada frame é analisado por redes neurais treinadas para detectar padrões operacionais
+                    específicos — um equipamento ocioso, um EPI ausente, um veículo fora de posição, um resíduo
+                    descartado incorretamente. O sistema não assiste ao vídeo: ele lê a operação.
+                  </p>
+                </div>
+                <div class="img-placeholder">
+                  Infográfico “Como a IA Vê”: câmera passiva x câmera + Ecovisa → análise → detecção → ação.
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="section section--tint">
+            <div class="shell">
+              <header class="section-head reveal">
+                <span class="section-head__label">Arquitetura</span>
+                <h2>Da câmera ao dashboard: o fluxo completo</h2>
+              </header>
+              <div class="flow flow--modern" aria-label="Fluxo de captura, análise e ação">
+                <div class="flow-step">
+                  <strong>Câmeras CFTV existentes</strong>
+                </div>
+                <span class="flow-arrow" aria-hidden="true">→</span>
+                <div class="flow-step">
+                  <strong>Captura de stream de vídeo</strong>
+                </div>
+                <span class="flow-arrow" aria-hidden="true">→</span>
+                <div class="flow-step">
+                  <strong>Modelos de IA Ecovisa — inferência em tempo real</strong>
+                </div>
+                <span class="flow-arrow" aria-hidden="true">→</span>
+                <div class="flow-step">
+                  <strong>Motor de regras + alertas configuráveis</strong>
+                </div>
+                <span class="flow-arrow" aria-hidden="true">→</span>
+                <div class="flow-step">
+                  <strong>Dashboard / API / ERP / Webhook</strong>
+                </div>
+              </div>
+              <div class="grid-2-asym" style="margin-top: 1.5rem; gap: 2rem;">
+                <div>
+                  <ul>
+                    <li><strong>Captura:</strong> compatível com qualquer câmera IP ou analógica com conversor. Sem troca de hardware.</li>
+                    <li><strong>Processamento:</strong> modelos treinados por vertical — Ambiental, Industrial, Logística, Smart Cities.</li>
+                    <li><strong>Inferência:</strong> detecção de objetos, classificação de comportamento, contagem e rastreamento de trajetória.</li>
+                    <li><strong>Alertas:</strong> notificações em tempo real via e-mail, SMS, webhook ou painel.</li>
+                    <li><strong>Integração:</strong> saída via API REST (JSON) pronta para conectar ao seu ERP ou sistema de gestão.</li>
+                  </ul>
+                </div>
+                <div class="img-placeholder">
+                  Fluxograma horizontal recomendado: capture → analise → aja.
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="section">
+            <div class="shell grid-2-asym">
+              <div>
+                <header class="section-head reveal">
+                  <span class="section-head__label">Hardware Agnóstico</span>
+                  <h2>Funciona com o que você já tem. Ponto.</h2>
+                </header>
+                <p>
+                  A Ecovisa é agnóstica de hardware. Isso significa que não importa a marca, resolução ou protocolo
+                  das suas câmeras — nossa plataforma se adapta à sua infraestrutura, não o contrário. Instalamos,
+                  calibramos e entregamos inteligência. Você não precisa abrir uma licitação para trocar equipamento.
+                </p>
+              </div>
+              <div class="img-placeholder">
+                Diagrama de compatibilidade: hub Ecovisa conectado a câmeras IP, analógicas, PTZ, NVR legado e nuvem.
+                Se grava vídeo, a Ecovisa analisa.
+              </div>
+            </div>
+          </section>
+
+          <section class="section section--tint">
+            <div class="shell grid-2-asym">
+              <div>
+                <header class="section-head reveal">
+                  <span class="section-head__label">Segurança</span>
+                  <h2>Seus dados ficam onde devem. Protegidos e auditáveis.</h2>
+                </header>
+                <p>
+                  A Ecovisa trata imagens como ativo sensível — porque são. Nossa arquitetura foi desenhada com
+                  privacidade desde o início (privacy by design):
+                </p>
+                <ul>
+                  <li>Processamento local ou em nuvem privada: as imagens não trafegam para servidores terceiros sem sua autorização.</li>
+                  <li>Anonimização de rostos: quando aplicável, faces são desfocadas automaticamente antes de qualquer armazenamento.</li>
+                  <li>Retenção configurável: você define por quanto tempo os frames são retidos — ou se são retidos.</li>
+                  <li>Conformidade LGPD: relatório de impacto disponível para auditorias. Nenhum dado é comercializado.</li>
+                  <li>Acesso com controle por perfil: cada usuário vê apenas o que precisa ver.</li>
+                </ul>
+              </div>
+              <div class="img-placeholder">
+                Trust bar visual: ícones de cadeado, escudo, relógio e anonimização em fundo escuro.
+              </div>
+            </div>
+          </section>
+
+          <section class="section">
+            <div class="shell grid-2-asym">
+              <div>
+                <header class="section-head reveal">
+                  <span class="section-head__label">Integração</span>
+                  <h2>Sua operação já tem sistemas. A Ecovisa fala com eles.</h2>
+                </header>
+                <p>
+                  A plataforma expõe uma API REST documentada com payloads em JSON. Cada evento detectado
+                  — uma não-conformidade, um veículo na doca, um alerta de EPI — pode disparar um webhook,
+                  alimentar um dashboard customizado ou gravar um registro no seu ERP. Integrações já realizadas
+                  com sistemas de gestão industrial, plataformas de BI e sistemas municipais de monitoramento.
+                </p>
+              </div>
+              <div class="img-placeholder">
+                Diagrama de integração: Ecovisa Platform → API REST / JSON → ERP | Dashboard | BI Tool | Webhook.
+              </div>
+            </div>
+          </section>
+
+          <section class="section section--dark">
+            <div class="shell text-center">
+              <h2>A melhor forma de entender a tecnologia é vê-la funcionando na sua operação.</h2>
+              <p class="hero-lead">
+                Em 90 dias de PoC, você valida na prática — com suas câmeras, no seu ambiente, com seus dados.
               </p>
-              <h2>Segurança de Dados e LGPD.</h2>
-              <p>Segurança de Dados e LGPD.</p>
-              <h2>Integração com ERPs/APIs (JSON).</h2>
-              <p>Integração com ERPs/APIs (JSON).</p>
+              <button type="button" class="btn btn-primary" data-route="contato">
+                Agendar PoC gratuita
+              </button>
             </div>
           </section>
         </article>
@@ -1573,7 +1704,6 @@
         <article data-view="sobre" hidden>
           <section class="section section--dark">
             <div class="shell">
-              <p class="kicker">Página 07 — Sobre</p>
               <h1>Ecovisa</h1>
               <p>Missão, Visão e Equipe.</p>
             </div>
@@ -1601,7 +1731,6 @@
         <article data-view="contato" hidden>
           <section class="section section--dark">
             <div class="shell">
-              <p class="kicker">Página 08 — Contato / Landing Page de PoC</p>
               <h1>Agendar PoC</h1>
               <p>Preencha os campos abaixo para entrarmos em contato.</p>
             </div>
@@ -1648,18 +1777,11 @@
         <div class="shell site-footer__main">
           <div class="site-footer__brand">
             <div style="display: flex; align-items: center; gap: 0.65rem">
-              <span class="logo-placeholder" aria-hidden="true">e</span>
+              <span class="logo-placeholder" aria-hidden="true">Ecovisa</span>
             </div>
             <p class="site-footer__brand-tag">
-              Visão computacional sobre a infraestrutura que você já tem — ambiental, industrial,
-              logística e cidades.
+              Visão computacional utilizando a infraestrutura que você já tem.
             </p>
-            <div class="site-footer__vert-pills" aria-hidden="true">
-              <span class="site-footer__pill site-footer__pill--a">Ambiental</span>
-              <span class="site-footer__pill site-footer__pill--i">Industrial</span>
-              <span class="site-footer__pill site-footer__pill--l">Logística</span>
-              <span class="site-footer__pill site-footer__pill--s">Smart Cities</span>
-            </div>
           </div>
 
           <nav class="site-footer__nav" aria-label="Segmentos">

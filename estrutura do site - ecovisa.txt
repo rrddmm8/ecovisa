@@ -21,9 +21,9 @@ Uso: análise de texto, tom de voz, consistência e sugestões de melhoria.
   verticais (Ambiental, Industrial, Logística, Smart Cities); integração sem troca
   obrigatória de hardware.
 
-• Rodapé — tagline: “Visão Computacional para o Amanhã.”
+• Rodapé — tagline: “Visão computacional utilizando a infraestrutura que você já tem.”
 
-• Copyright no rodapé: Copyright 2026 Ecovisa.
+• Copyright no rodapé: © 2026 Ecovisa.
 
 • Layout das verticais (padrão atual): cada vertical tem hero em grade
   (vertical-hero__grid) com texto à esquerda e bloco de mídia à direita — imagem com
@@ -75,7 +75,7 @@ Ordem e rótulos:
 5. RODAPÉ
 --------------------------------------------------------------------------------
 
-Coluna 1: logo placeholder + “Visão Computacional para o Amanhã.”
+Coluna 1: logo real + “Visão computacional utilizando a infraestrutura que você já tem.”
 
 Coluna “Verticais” (links): Ambiental | Industrial | Logística | Smart Cities
 
@@ -295,8 +295,6 @@ Módulos (pasta imagens/smart cities/ — 4 com imagem + 1 só texto)
   • Análise de cruzamentos e interseções ferroviárias — fluxo, anomalias, alertas.
   • Controle de ocupação de vagas públicas — fluxos, cruzamento de dados.
   • Detecção de Invasão de Faixa (Vegetação) — vegetação perto de ativos; poda.
-  • Inspeção de Integridade de Ativos — corrosão, isoladores, anomalias térmicas; câmeras ou drones.
-    (sem imagem no layout — módulo texto only)
 
 Seção Escopo — “Alinhamento com ODS e conformidade” (após os módulos)
   • ODS 11 e 9.
@@ -312,7 +310,6 @@ Implantação + PoC
 --------------------------------------------------------------------------------
 
 Cabeçalho escuro
-  • Kicker: “Página 06” (referência de wireframe — revisar para produção)
   • H1: Tecnologia
 
 Corpo
@@ -326,7 +323,6 @@ Corpo
 --------------------------------------------------------------------------------
 
 Cabeçalho
-  • Kicker: Página 07 — Sobre
   • H1: Ecovisa
   • Linha: Missão, Visão e Equipe.
 
@@ -342,7 +338,6 @@ Corpo
 --------------------------------------------------------------------------------
 
 Cabeçalho
-  • Kicker: Página 08 — Contato / Landing Page de PoC
   • H1: Agendar PoC
   • Texto: Preencha os campos abaixo para entrarmos em contato.
 
@@ -352,6 +347,7 @@ Formulário (campos obrigatórios *)
   • E-mail
   • Mensagem
   • Botão: Enviar
+  • Layout: formulário à esquerda com títulos de campo claros; painel de incentivo à direita com mensagem convidativa.
 
 Comportamento (front-end apenas): validação; mensagem de sucesso simulada:
 “Recebemos seu envio. Em breve nossa equipe retorna o contato.”
@@ -361,8 +357,8 @@ Comportamento (front-end apenas): validação; mensagem de sucesso simulada:
 14. ELEMENTOS DE MARCA / UI (REFERÊNCIA PARA COPY VISUAL)
 --------------------------------------------------------------------------------
 
-• Logo no header: placeholder com letra “e” (existe também ecovisa logo horizontal
-  fundo verde.png na pasta — pode ser integrado no HTML depois).
+• Logo no header: imagem real usada a partir de imagens/ecovisa logo horizontal
+  fundo verde.png.
 
 • Accent por rota (JS): cores distintas por vertical/página na navegação (--nav-accent).
 
@@ -380,8 +376,7 @@ Comportamento (front-end apenas): validação; mensagem de sucesso simulada:
 • Home hero e várias seções: “(inserir imagem)”; Logística — módulos ainda sem arte local.
 • Ambiental — módulo EPI/comportamento: “(Adicionar descrição do módulo)”.
 • Industrial — módulo comportamento de clientes: “(Adicionar descrição do módulo)”.
-• Tecnologia e Sobre: textos curtos/duplicados; kickers “Página 06/07/08” parecem rótulos
-  de wireframe.
+• Tecnologia e Sobre: textos curtos/duplicados; kickers de wireframe removidos da versão atual.
 • FAQ item LGPD: resposta de uma linha — oportunidade de aprofundar.
 • Links Políticas de Privacidade e Termos: href “#” (conteúdo legal pendente).
 • Formulário: copy de privacidade/consentimento (LGPD) não aparece junto ao formulário.
