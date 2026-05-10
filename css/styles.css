@@ -335,6 +335,7 @@ main {
 
 .section--muted {
   background: #e8ecec;
+  color: var(--green-chumbo);
 }
 
 .section--vertical {
@@ -442,7 +443,7 @@ main {
   font-size: clamp(1rem, 2.4vw, 1.2rem);
   font-weight: 500;
   line-height: 1.45;
-  color: var(--green-chumbo);
+  color: var(--pure-white);
   max-width: 52rem;
   margin-inline: auto;
 }
@@ -565,6 +566,9 @@ main {
   transition:
     transform 0.35s var(--ease-out),
     box-shadow 0.35s var(--ease-out);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .card-pain:hover {
@@ -574,6 +578,11 @@ main {
 
 .card-pain h3 {
   font-size: 1.1rem;
+  color: var(--green-chumbo);
+}
+
+.card-pain p {
+  color: var(--green-chumbo);
 }
 
 .icon-line {
@@ -584,7 +593,7 @@ main {
   color: #b87a14;
   display: grid;
   place-items: center;
-  margin-bottom: 0.65rem;
+  margin: 1.65rem 0;
 }
 
 .flow {
@@ -665,8 +674,6 @@ main {
 }
 
 .vert-card .bg {
-  position: absolute;
-  inset: 0;
   background-size: cover;
   background-position: center;
   opacity: 0.35;
@@ -674,28 +681,30 @@ main {
 }
 
 .vert-card .content {
-  position: relative;
   z-index: 1;
   padding: 1.25rem 1.35rem;
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  background: linear-gradient(180deg, transparent 0%, rgba(1, 46, 32, 0.95) 100%);
+  align-items: center;
+  background: var(--pure-white);
+}
+
+.vert-card .content .text {
+  color: var(--green-chumbo);
 }
 
 .vert-card__ico {
-  position: absolute;
-  top: 1.1rem;
-  left: 1.35rem;
   width: 42px;
   height: 42px;
   border-radius: 12px;
   display: grid;
   place-items: center;
   background: rgba(255, 255, 255, 0.12);
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  color: var(--verde-esmeralda);
+  border: 1px solid var(--verde-esmeralda);
+  color: var(--verde-esmeralda) !important;
+  margin: 0.85rem 0.25rem;
 }
 
 .vert-card__ico svg {
@@ -737,11 +746,12 @@ main {
   text-transform: uppercase;
   letter-spacing: 0.08em;
   color: var(--vc);
-  margin-bottom: 0.35rem;
+  margin-bottom: 0.65rem;
 }
 
 .section--poc {
   background: linear-gradient(180deg, var(--ice) 0%, #e5ecec 100%);
+  color: var(--green-chumbo)
 }
 
 .timeline-pro {
@@ -1353,6 +1363,7 @@ main {
 .flow-step strong {
   display: block;
   margin-bottom: 0.25rem;
+  color: var(--green-chumbo);
 }
 
 .flow-step span {
@@ -1709,4 +1720,26 @@ main {
   overflow: hidden;
   clip: rect(0, 0, 0, 0);
   border: 0;
+}
+
+.form-contato {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  background: white;
+}
+
+.form-contato section.form {
+  align-self: center;
+  min-width: 560px;
+}
+
+@media (max-width: 560px) {
+  .form-contato section.form {
+    min-width: 200px;
+  }
+}
+
+.form-contato label {
+  color: var(--green-chumbo);
 }
