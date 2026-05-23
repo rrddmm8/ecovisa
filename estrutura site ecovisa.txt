@@ -1,0 +1,651 @@
+================================================================================
+DOCUMENTO: ESTRUTURA DO SITE ECOVISA — VERSÃO VIVA
+================================================================================
+
+O QUÊ É ESTE DOCUMENTO?
+Um arquivo de referência central que documenta o estado completo do site da Ecovisa:
+estrutura de navegação, conteúdo por página, componentes, imagens, funcionalidades e
+lacunas. Ele serve como "single source of truth" entre o dev, o designer e o gerente
+de produto.
+
+PARA QUÊ SERVE?
+- Análise rápida por IA (Claude): ao fornecer este arquivo, a IA entende exatamente
+  o que existe, o que falta e onde fazer melhorias sem pedir para reler código HTML.
+- Comunicação com o time: evita mal-entendidos sobre o que já foi feito vs. o que falta.
+- Histórico de mudanças: quando você atualizar este arquivo, deixa claro o progresso.
+- Base para prompts: cada novo prompt sobre o site pode referenciar as seções aqui.
+
+COMO USAR?
+1. Mantenha este arquivo SEMPRE ATUALIZADO quando fizer mudanças no site.
+2. Antes de pedir à IA para melhorar algo, envie este arquivo junto com seu prompt.
+3. A IA usará este documento para entender contexto sem reler HTML inteiro.
+4. Versione: mude "VERSÃO VIVA" para "v1.0", "v1.1", etc. conforme evolui.
+
+Última atualização: maio/2026
+Responsável: [seu nome/equipe]
+
+================================================================================
+
+
+================================================================================
+ECOVISA — ESTRUTURA COMPLETA DO SITE (REFERÊNCIA PARA COPY / REVISÃO DE CONTEÚDO)
+================================================================================
+Documento sincronizado com o código (index.html + js/app.js + css/styles.css).
+Última revisão estrutural: maio/2026.
+
+Uso: análise de texto, tom de voz, consistência e sugestões de melhoria.
+
+--------------------------------------------------------------------------------
+1. VISÃO GERAL
+--------------------------------------------------------------------------------
+
+• Tipo: site estático em uma única página (SPA leve): todo o conteúdo está em
+  index.html; a navegação troca "telas" via hash na URL (ex.: #/ambiental).
+
+• Título da aba (meta <title>): Ecovisa — Inteligência que vê, agilidade que entrega
+
+• Idioma: pt-BR
+
+• Proposta central (marca): Visão computacional sobre câmeras existentes; PoC
+  de 90 dias sem custo; verticais (Ambiental, Industrial, Logística, Smart Cities);
+  integração sem troca obrigatória de hardware.
+
+• Rodapé — tagline: "Visão computacional utilizando a infraestrutura que você já tem."
+
+• Copyright no rodapé: © 2026 Ecovisa. Todos os direitos reservados.
+
+• Layout das verticais (padrão atual): cada vertical tem hero em grade
+  (vertical-hero__grid) com texto à esquerda e bloco de mídia à direita — imagem com
+  efeito de "scan", badges contextuais e faixa decorativa. A ordem das seções
+  internas é unificada: Hero → Desafios → Módulos → Escopo (ODS/conformidade)
+  → Implantação (card standalone, sem split-banner).
+
+--------------------------------------------------------------------------------
+2. NAVEGAÇÃO E ROTAS (SITEMAP LÓGICO)
+--------------------------------------------------------------------------------
+
+Base: arquivo index.html. URLs efetivas (fragmento após #):
+
+  /                    → Página inicial (home)
+  /ambiental           → Vertical Ambiental
+  /industrial          → Vertical Industrial
+  /logistica           → Vertical Logística
+  /smart-cities        → Vertical Smart Cities
+  /tecnologia          → Página Tecnologia
+  /sobre               → Página Sobre (missão, visão, história, diferenciais)
+  /contato             → Formulário Agendar PoC / contato
+
+Observação técnica: rotas inválidas no hash voltam para a home ("").
+
+--------------------------------------------------------------------------------
+3. MENU PRINCIPAL (DESKTOP)
+--------------------------------------------------------------------------------
+
+Ordem e rótulos:
+
+  • Inicial                    → rota: (vazia) = home
+  • Segmentos (dropdown):
+      – Ambiental              subtexto: coleta, gestão e reciclagem de resíduos
+      – Industrial             subtexto: controle de qualidade e otimização de processos
+      – Logística              subtexto: inspeção automatizada e gestão de cargas
+      – Smart cities           subtexto: monitoramento veicular e fluxo de pessoas
+  • Tecnologia
+  • Sobre
+  • Agendar PoC (botão primário → rota contato)
+
+--------------------------------------------------------------------------------
+4. MENU MOBILE (DRAWER)
+--------------------------------------------------------------------------------
+
+  Inicial | Segmentos (rótulo estático, sem link) | Ambiental | Industrial |
+  Logística | Smart Cities | Tecnologia | Sobre | Agendar PoC
+
+--------------------------------------------------------------------------------
+5. RODAPÉ
+--------------------------------------------------------------------------------
+
+Coluna 1 (marca): logo real via <img class="footer-logo"> (imagens/ecovisa logo
+  horizontal fundo verde.png) + tagline "Visão computacional utilizando a
+  infraestrutura que você já tem."
+
+Coluna "Segmentos" (links): Ambiental | Industrial | Logística | Smart Cities
+
+Coluna "Ecovisa" (links institucionais): Inicial | Tecnologia | Sobre | Contato
+
+Coluna decorativa:
+  • Pipeline: "Vídeo → IA → Insight → Ação"
+  • Redes sociais:
+      – Youtube: https://www.youtube.com/@ecovisa_tech
+      – Instagram: https://www.instagram.com/ecovisa.tech
+
+Linha inferior:
+  • Copyright 2026 Ecovisa. Todos os direitos reservados.
+  • Política de Privacidade (link # — placeholder)
+  • Termos de Uso (link # — placeholder)
+
+Nota: tanto o header quanto o footer usam a imagem real do logo.
+
+--------------------------------------------------------------------------------
+6. PÁGINA INICIAL (HOME) — CONTEÚDO POR SEÇÃO
+--------------------------------------------------------------------------------
+
+6.1 Hero (section--dark section--hero)
+  • Kicker: "A Promessa Única"
+  • H1: Sua infraestrutura de vídeo já grava o passado. Nós auditamos o seu presente.
+  • Lead: Transforme câmeras passivas em uma rede de inteligência ativa. A Ecovisa
+    utiliza Visão Computacional de alta precisão para identificar gargalos, garantir
+    segurança e recuperar margem operacional em tempo real.
+  • CTA único: "Iniciar Prova de Conceito (Custo Zero)" → contato
+  • Área visual (.hero-visual): carrossel de 4 imagens com autoplay 3,5s, prev/next
+    e dots de navegação. Slides:
+      1. imagens/ambiental/ambiental - modulo transbordo.png
+      2. imagens/industrial/industrial - modulo controle de qualidade.png
+      3. imagens/industrial/industrial - modulo produtividade e controle.png
+      4. imagens/smart cities/smart cities - modulo analise de transito.png
+    Overlays sobre o carrossel: "Status: Ocioso" | "Nível: 85%" (bb-box)
+
+6.2 Faixa de valor (value-strip)
+  • Texto: Transformamos sua infraestrutura atual em uma operação inteligente. Sem troca
+    de hardware, sem burocracia, com retorno validado em tempo recorde.
+  • Destaques em linha: CFTV existente | IA em tempo real | ROI mensurável
+
+6.3 Bloco de problema (home-intro-band)
+  • H2: Você está sentado sobre uma mina de ouro de dados — e ela está desligada.
+  • Lead: texto sobre cegueira operacional, custo de oportunidade, OPEX.
+  • Painel lateral: 3 bullets de dor (vídeo sem indicador, riscos pós-dano, decisões
+    sem dados visuais).
+
+6.4 Plataforma única (section--muted)
+  • H2: Uma única plataforma. Infinitas camadas de inteligência.
+  • 4 pilares em grid: Captura agnóstica / Processamento contínuo / Insights acionáveis
+    / [4º pilar não lido neste trecho]
+
+6.5 Pipeline visual (home-pipeline)
+  • Fluxo horizontal: Capturar → Processar → Alertar → Registrar → Agir
+
+6.6 Nossas Verticais (section--dark, grid-cards-4 — 4 cards clicáveis)
+  • Ambiental — Otimização da gestão de resíduos — Compliance e rastreabilidade 24/7
+  • Industrial — Ganho efetivo de produtividade — OEE, qualidade e segurança
+  • Logística — Monitoramento preciso e 24/7 — Pátio, docas e integridade de carga
+  • Smart Cities — Visão para cidades inteligentes — Mobilidade, segurança e zeladoria
+
+6.7 Diferencial Transversal (section--muted, grid-2-asym)
+  • Imagem: imagens/gerais/home-diferencial-transversal.png ✓
+  • H2: Diferencial Transversal: Produtividade & IA Visual
+  • Texto: Produtividade redefinida com IA Visual...
+
+6.8 Modelo de Engajamento (section--poc, timeline-pro — 3 cards)
+  • H2: Modelo de Engajamento (A PoC)
+  • Passo 1: Diagnóstico (Sem Custo)
+  • Passo 2: PoC 3 Meses (Validação)
+  • Passo 3: Proposta Comercial (Escala)
+
+6.9 FAQ (acordeão — 6 perguntas)
+  1) Preciso trocar minhas câmeras ou comprar hardware novo?
+  2) Como funciona o modelo de engajamento em três passos?
+  3) Como a plataforma entrega valor para a operação?
+  4) A solução trata dados e imagens com responsabilidade? (resposta em 3 parágrafos
+     — LGPD, sem armazenamento de imagens, conformidade; expandida maio/2026)
+  5) Quanto tempo dura a PoC e quando aparecem resultados?
+  6) Integração com sistemas que já usamos?
+
+6.10 CTA final (seção escura)
+  • H2: Vamos transformar suas imagens em dados? Inicie sua PoC.
+  • Botão: Agendar PoC → contato
+
+--------------------------------------------------------------------------------
+7. VERTICAL AMBIENTAL — CONTEÚDO (ORDEM DAS SEÇÕES)
+--------------------------------------------------------------------------------
+
+Hero (vertical-hero__grid + mídia)
+  • Eyebrow: Ecovisa Ambiental
+  • H1: Transparência total do descarte ao destino final.
+  • Lead: Maximize a pureza dos materiais e garanta conformidade normativa com
+    auditoria visual 24/7.
+  • CTA: Iniciar Prova de Conceito (Custo Zero) → contato
+  • Imagem: imagens/ambiental/ambiental - modulo triagem.png ✓
+  • Badges: "Triagem" | "NR 38"
+
+Seção Desafios (rótulo "Diagnóstico")
+  • Incerteza na Triagem — triagem manual lenta, contaminação cruzada, perda de valor
+  • Risco de Compliance — sem dados visuais; "buraco negro"; NR 38
+  • Ociosidade Oculta — falta de controle em transbordo/aterros
+
+Seção Módulos (imagens reais em imagens/ambiental/)
+  • Transbordo: imagens/ambiental/ambiental - modulo transbordo.png ✓
+    — tempo de descarregamento, ociosidade de caminhões, preenchimento
+  • Coleta: imagens/ambiental/ambiental - modulo coleta.png ✓
+    — materiais não autorizados, quantidade de lixeiras, não conformidade
+  • Triagem: imagens/ambiental/ambiental - modulo triagem.png ✓
+    — produtividade nas esteiras, ritmo, segurança/ergonomia, classificação, rejeito
+  • Segurança (EPI): imagens/ambiental/ambiental - modulo seguranca.png ✓
+    — monitoramento de EPI (capacete, luvas, colete, botas), comportamentos não
+    conformes, alertas automatizados, auditoria contínua
+
+Seção Escopo — "Alinhamento com ODS e conformidade"
+  • ODS 8, 9, 11, 12
+  • NR 38 e políticas de logística reversa
+  • Benefícios: rastreabilidade, redução de rejeitos, créditos de carbono
+
+Implantação (impl-card standalone — sem split-banner, sem vertical-cta)
+  • Conectamos a IA nos pontos críticos da triagem; até 15 dias; dashboards sem
+    novos sensores.
+
+--------------------------------------------------------------------------------
+8. VERTICAL INDUSTRIAL — CONTEÚDO (ORDEM DAS SEÇÕES)
+--------------------------------------------------------------------------------
+
+Hero (vertical-hero__grid + mídia)
+  • Eyebrow: Ecovisa Industrial
+  • H1: Onde o olho humano falha, nossa IA acelera.
+  • Lead: Reduza o tempo de ciclo e elimine riscos de acidentes com supervisão
+    computacional autônoma.
+  • CTA: Agendar PoC de 3 meses → contato
+  • Imagem: imagens/industrial/industrial - modulo produtividade e controle.png ✓
+  • Badges: "OEE" | "Qualidade"
+
+Desafios (rótulo "Chão de fábrica")
+  • Gargalos Invisíveis
+  • Segurança Falível — EPIs, áreas de risco, passivos
+  • Cegueira Operacional — vídeo sem decisão rápida sobre OEE
+
+Módulos (imagens reais em imagens/industrial/)
+  • Produtividade e controle: imagens/industrial/industrial - modulo produtividade e controle.png ✓
+    — esteira, ociosidade, perdas, alertas, raio-x
+  • Controle de Qualidade Visual: imagens/industrial/industrial - modulo controle de qualidade.png ✓
+    — defeitos, automação, banco de defeitos
+  • Segurança e prevenção: imagens/industrial/industrial - modulo seguranca e prevencao.png ✓
+    — alertas, dados de segurança
+  • Comportamento de clientes e usuários: imagens/industrial/industrial - modulo comportamento de cliente.png ✓
+    — fluxo de pessoas, interações com equipamentos, gargalos humanos; escopo
+    co-definido com cliente durante a PoC
+
+Seção Escopo — "Alinhamento com ODS e conformidade"
+  • ODS 9, 12, 8
+  • ISO 9001, ISO 45001, NR-12
+  • Benefícios: detecção em tempo real, retrabalho, segurança, auditoria sem parar linha
+
+Implantação (impl-card standalone — sem split-banner, sem vertical-cta)
+  • Integração com VMS; sem novos sensores.
+
+--------------------------------------------------------------------------------
+9. VERTICAL LOGÍSTICA — CONTEÚDO (ORDEM DAS SEÇÕES)
+--------------------------------------------------------------------------------
+
+Hero (vertical-hero__grid + mídia)
+  • Eyebrow: Ecovisa Logística
+  • H1: Sua operação não pode parar por falta de visão.
+  • Lead: Câmeras passivas → ferramentas de auditoria ativa; transbordo e pátio.
+  • CTA: Agendar PoC → contato
+  • Imagem: URL externa Unsplash (armazém/docas) — ainda não substituída por asset local
+  • Badges: "Docas" | "SLA"
+
+Os Desafios (rótulo "Operação")
+  • Ineficiência no Pátio — tempos de carga/descarga, filas, ociosidade
+  • Falhas na Conferência — contagem manual, erros, cross-docking
+  • Risco à Integridade — avarias, acessos não autorizados
+
+Módulos (imagens reais em imagens/gerais/)
+  • Otimização de Docas e Pátio: imagens/gerais/logistica-modulo-docas-patio.png ✓
+    — tempos médios, alertas SLA, veículos ociosos
+  • Conferência Automatizada de Carga: imagens/gerais/logistica-modulo-conferencia-carga.png ✓
+    — volumes, logotipos, integridade no cross-docking
+  • Vigilância de Ativos e Integridade: imagens/gerais/logistica-modulo-vigilancia-ativos.png ✓
+    — avarias, acessos; prova digital
+
+Seção Escopo — "Alinhamento com ODS e conformidade"
+  • ODS 9 e 11
+  • Lei do Motorista (fadiga); ABNT NBR 14619
+  • Benefícios: avarias, docas com predição, furtos, rastreamento visual
+
+Implantação (impl-card standalone — sem split-banner, sem vertical-cta)
+  • IA + CFTV; APIs ou dashboards.
+
+--------------------------------------------------------------------------------
+10. VERTICAL SMART CITIES — CONTEÚDO (ORDEM DAS SEÇÕES)
+--------------------------------------------------------------------------------
+
+Hero (vertical-hero__grid + mídia)
+  • Eyebrow: Ecovisa Smart Cities
+  • H1: Cidades que veem, cidades que agem.
+  • Lead: Inteligência visual para fluxos urbanos e elevar a segurança do cidadão.
+  • CTA: Agendar PoC → contato
+  • Imagem: imagens/smart cities/smart cities - modulo analise de transito.png ✓
+  • Badges: "Tráfego" | "CICC"
+
+Os Desafios (rótulo "Território")
+  • Gestão às Cegas — falta de dados dinâmicos sobre fluxo
+  • Imagens Mortas — câmeras sem decisão imediata
+  • Zeladoria Reativa — lixo irregular, falhas em ativos públicos
+
+Módulos (imagens reais em imagens/smart cities/)
+  • Análise de Trânsito: imagens/smart cities/smart cities - modulo analise de transito.png ✓
+    — pedestres, veículos, otimização pública
+  • Análise de Cruzamentos: imagens/smart cities/smart cities - modulo analise de cruzamento.png ✓
+    — fluxo, anomalias, alertas
+  • Controle de Ocupação: imagens/smart cities/smart cities - modulo controle de ocupacao.png ✓
+    — fluxos, cruzamento de dados
+  • Detecção de Invasão de Faixa: imagens/smart cities/smart cities - modulo deteccao de invasao de faixa.png ✓
+    — vegetação perto de ativos, poda
+
+Seção Escopo — "Alinhamento com ODS e conformidade"
+  • ODS 11 e 9
+  • ISO 37122; LGPD para imagens
+  • Benefícios: congestionamentos, acidentes, zeladoria, economia pública
+
+Implantação (impl-card standalone — sem split-banner, sem vertical-cta)
+  • Rede municipal (CICC); dashboards.
+
+--------------------------------------------------------------------------------
+11. PÁGINA TECNOLOGIA — 5 SEÇÕES
+--------------------------------------------------------------------------------
+
+Reconstruída em maio/2026. Foco pragmático (benefícios operacionais, não jargão
+técnico). Sem CTA de formulário embutido — usuário é direcionado ao Contato.
+
+Seção 1 — Intro / Hero (dark, grid 2 colunas)
+  • Eyebrow: "Como Funciona"
+  • H1: Tecnologia Simples Para Operações Reais
+  • Lead: "Não é magia. É visão computacional aplicada às câmeras que você já tem.
+    Capturamos imagens, processamos em tempo real com IA treinada no seu contexto
+    específico, e entregamos inteligência acionável direto no dashboard ou ERP.
+    Sem hardware novo, sem integração complexa, sem espera."
+  • Imagem (col direita): imagens/gerais/tecnologia-hero-novo.png
+    (fallback via onerror: imagens/gerais/tecnologia-hero.png)
+
+Seção 2 — Como Funciona (light #f2f5f5, shell--narrow)
+  • Label: "O Processo" | H2: "Do Seu Ambiente Para Seus Resultados"
+  • 3 cards em grid (auto-fit, minmax 240px):
+      Etapa 1 — Captura: câmera IP, CFTV, drone, VMS ou smartphone; sem obra
+      Etapa 2 — Processamento & IA: deep learning por frame, detecção de padrões/
+        anomalias/objetos; local quando possível, nuvem segura quando necessário
+      Etapa 3 — Entrega de Inteligência: dashboards, alertas, relatórios automáticos;
+        integra com ERP/CRM/BI; LGPD garantida
+  • SVG pipeline inline (800×140): CÂMERA (IP·CFTV·Drone) → IA ECOVISA
+    (Análise·Detecção·Alerta) → DASHBOARD (ERP·CRM·BI)
+    Marker: id="arrowflow"; setas verde #10c87e
+
+Seção 3 — PoC (dark, shell--narrow)
+  • Label: "PoC" | H2: "90 Dias Para Validar Seu ROI (Custo Zero)"
+  • Lead: "Sem risco, sem compromisso, com resultado."
+  • 3 fases em grid (auto-fit, minmax 240px):
+      Fase 1 — Diagnóstico (Semana 1, Custo Zero)
+      Fase 2 — Implementação (Semanas 2–8, Você Não Paga Nada)
+      Fase 3 — Validação (Semanas 9–12, Números na Mão)
+  • Destaque final: "Nenhum custo na PoC. Você só paga quando confirma que funciona."
+
+Seção 4 — Por Que Agora? (light #f2f5f5, shell--narrow)
+  • Label: "Por Que Agora?" | H2: "3 Motivos Para Agendar Sua PoC Hoje"
+  • 3 cards flex com ícones:
+      💰 Sem Risco Financeiro — PoC custo zero; valida antes de qualquer compromisso
+      ⚡ Implementação Rápida — 90 dias, primeira inteligência em 4 semanas
+      🔧 Usa Sua Infraestrutura — sem obra, sem parada, sem câmeras novas
+
+Seção 5 — CTA Final (dark, shell--narrow, text-align: center)
+  • H2: "Pronto Para Ver Sua Operação em Tempo Real?"
+  • Lead: "Diagnóstico gratuito na semana 1. Sem compromisso, sem custo."
+  • Botão: "Agendar PoC (Custo Zero)" → contato
+
+--------------------------------------------------------------------------------
+12. PÁGINA SOBRE — 6 SEÇÕES
+--------------------------------------------------------------------------------
+
+Reconstruída em maio/2026. Tom conciso, visual, pragmático.
+Sem CTA de formulário embutido — usuário é direcionado ao Contato.
+
+Seção 1 — Hero (dark)
+  • H1: Sobre a Ecovisa
+  • Lead: "Pragmatismo com inovação para operações reais."
+
+Seção 2 — Nossa História (light #f2f5f5, shell--narrow)
+  • Label: "Nossa História" | H2: "Fundada em 2023 em Curitiba"
+  • 1 parágrafo: fundação 2023, Curitiba, câmeras como arquivo morto, pesquisa
+    acadêmica → chão de fábrica, solução sem nova infraestrutura.
+
+Seção 3 — Missão, Visão & Valores (dark, shell--narrow)
+  • Label: "Por Que Existimos" | H2: "Missão, Visão & Valores"
+  • 2 cards (Missão + Visão):
+      Missão: Democratizar inteligência visual para PMEs; sem complexidade burocrática
+      Visão: Ser o olho invisível de cada operação crítica na América Latina, 24h/dia
+  • 5 value cards em grid (auto-fit, minmax 220px):
+      Pragmatismo | Transparência | Parceria | Inovação | Integridade
+
+Seção 4 — O Que Fazemos (light #f2f5f5, shell--narrow)
+  • Label: "O Que Entregamos" | H2: "Transformamos Câmeras em Inteligência Operacional"
+  • 1 parágrafo + 3 cards (text-align: center):
+      📷 Hardware Agnóstico — funciona com qualquer câmera IP ou CFTV já instalada
+      📈 ROI Mensurável — cada entrega tem uma métrica; números, não promessas
+      ⚡ Implementação Rápida — PoC 90 dias; primeira inteligência ativa em 4 semanas
+
+Seção 5 — Por Que Ecovisa? (dark, shell--narrow)
+  • Label: "Nossos Diferenciais" | H2: "Por Que Ecovisa?"
+  • 4 cards flex com ícones:
+      📹 Hardware Agnóstico — usa o que você já tem; sem trocar nada
+      📊 Resultado em Números — dados reais, métricas reais
+      🚀 Implementação Rápida — 90 dias, primeira inteligência em 4 semanas
+      🔒 Sem Risco Financeiro — PoC custo zero; você paga só depois de validar
+
+Seção 6 — CTA Final (gradient #012e20 → #011a12, shell--narrow, text-align: center)
+  • H2: "Pronto Para Transformar Imagens em Inteligência?"
+  • Lead: "Diagnóstico gratuito na semana 1. PoC de 90 dias sem cobrança."
+  • Botão: "Agendar Diagnóstico Gratuito" → contato
+
+--------------------------------------------------------------------------------
+13. PÁGINA CONTATO / AGENDAR POC
+--------------------------------------------------------------------------------
+
+Seção 1 — Cabeçalho (section--dark)
+  • H1: Agendar PoC
+  • Texto: Preencha os campos abaixo para entrarmos em contato.
+
+Seção 2 — Formulário (section form)
+  • Campos obrigatórios: Nome | Empresa | E-mail | Mensagem
+  • Botão: Enviar
+  • Layout: formulário centralizado em .shell (sem painel lateral de incentivo)
+  • Feedback inline: validação JS; mensagem de sucesso simulada:
+    "Recebemos seu envio. Em breve nossa equipe retorna o contato."
+  • Sem envio real a backend.
+
+Nota técnica: o artigo da página Contato tem class="form-contato". O CSS definiu
+  .form-contato { display: flex } — para que o hidden funcione, foi adicionado
+  .form-contato[hidden] { display: none } em styles.css.
+
+--------------------------------------------------------------------------------
+14. ELEMENTOS DE MARCA / UI (REFERÊNCIA PARA COPY VISUAL)
+--------------------------------------------------------------------------------
+
+• Logo no header: imagem real (imagens/ecovisa%20logo%20horizontal%20fundo%20verde.png)
+• Logo no footer: imagem real via <img class="footer-logo"> (mesmo arquivo)
+
+• Accent por rota (JS: --nav-accent):
+    home       → #10c87e (verde esmeralda, fallback)
+    ambiental  → #013220
+    industrial → #002366
+    logistica  → #ff8c00
+    smart-cities → #6200ee
+    tecnologia, sobre, contato → #10c87e
+
+• CTAs recorrentes: "Agendar PoC", "Iniciar Prova de Conceito (Custo Zero)",
+  "Agendar Diagnóstico Gratuito", "Agendar PoC (Custo Zero)"
+
+• Capitalização padronizada para "PoC" (não "POC") em todo o HTML.
+
+• Verticais: todas com imagens locais no hero (exceto Logística, que usa URL Unsplash).
+
+--------------------------------------------------------------------------------
+15. LACUNAS E PLACEHOLDERS (CHECKLIST PARA O GERENTE DE COPY)
+--------------------------------------------------------------------------------
+
+Imagens pendentes de substituição:
+  ☐ Logística — hero: imagem Unsplash externa → substituir por asset da marca
+
+Pendentes legais/técnicos:
+  ☐ Links Política de Privacidade e Termos: href "#" (conteúdo legal ausente)
+  ☐ Formulário: texto de consentimento LGPD junto ao form (ausente)
+  ☐ Backend para formulário de contato (atualmente apenas validação JS)
+
+--------------------------------------------------------------------------------
+16. ARQUIVOS DE SUPORTE NO PROJETO (NÃO INTEGRADOS AO TEXTO ACIMA)
+--------------------------------------------------------------------------------
+
+• documentos/Brandbook Ecovisa.docx
+• documentos/Estrutura do novo site - Ecovisa (1).docx
+
+Estes podem conter diretrizes de marca e estrutura editorial oficial.
+
+--------------------------------------------------------------------------------
+17. ESTADO ATUAL DO DESENVOLVIMENTO
+--------------------------------------------------------------------------------
+
+Status geral (estimativa por página) — atualizado maio/2026:
+  • Home          → ~95%  (carrossel com 4 imagens reais no hero ✓; todas as seções
+                            com imagens reais ✓; CTA limpo)
+  • Ambiental     → ~90%  (hero + 4 módulos com imagens reais ✓; copy completo ✓)
+  • Industrial    → ~90%  (hero + 4 módulos com imagens reais ✓; copy completo ✓)
+  • Logística     → ~88%  (hero Unsplash pendente; 3 módulos com imagens reais ✓)
+  • Smart Cities  → ~90%  (hero + 4 módulos com imagens reais ✓; copy completo ✓)
+  • Tecnologia    → ~92%  (5 seções completas ✓; foco pragmático; imagem hero com
+                            fallback automático para versão anterior)
+  • Sobre         → ~92%  (6 seções concisas ✓; tom visual e direto)
+  • Contato       → ~85%  (formulário validado no front; sem backend)
+
+Imagens inseridas e confirmadas:
+  ✓ Home hero (.hero-visual): carrossel — ambiental transbordo, industrial controle
+    de qualidade, industrial produtividade, smart cities trânsito
+  ✓ Home — Diferencial Transversal: home-diferencial-transversal.png
+  ✓ Logística — Módulo Docas e Pátio: logistica-modulo-docas-patio.png
+  ✓ Logística — Módulo Conferência de Carga: logistica-modulo-conferencia-carga.png
+  ✓ Logística — Módulo Vigilância de Ativos: logistica-modulo-vigilancia-ativos.png
+  ✓ Tecnologia — hero: tecnologia-hero-novo.png (com fallback para tecnologia-hero.png)
+  ✓ Footer logo: imagem real inserida (era placeholder <span>)
+
+Páginas reconstruídas em maio/2026:
+  ✓ Tecnologia — reconstruída do zero com 5 seções: Intro / Como Funciona (SVG
+    pipeline) / PoC 3 Fases / Por Que Agora / CTA Final
+  ✓ Sobre — reconstruída do zero com 6 seções: Hero / Nossa História / Missão+Visão
+    +Valores / O Que Fazemos / Por Que Ecovisa / CTA Final
+
+Componentes removidos em maio/2026:
+  ✓ split-banner (wrapper grid 2 colunas): removido de todas as 4 verticais
+  ✓ vertical-cta (card "Agendar PoC" inline nas verticais): removido de todas as 4
+    verticais — formulário de contato centralizado na página /contato
+  ✓ impl-card agora é standalone dentro de .shell (sem split-banner como wrapper)
+
+Bug corrigido em maio/2026:
+  ✓ Formulário de contato aparecia em todas as páginas: causado por
+    .form-contato { display: flex } sobrescrevendo o atributo HTML hidden.
+    Corrigido adicionando .form-contato[hidden] { display: none } em styles.css.
+
+Funcionalidades JavaScript ativas (js/app.js):
+  • Navegação hash SPA: troca de views via data-route / data-view sem reload
+  • Accordion FAQ: expand/collapse com aria-expanded
+  • Dropdown de Segmentos no menu desktop
+  • Mobile drawer: abertura/fechamento com aria-expanded
+  • Accent dinâmico por vertical: aplica --nav-accent via verticalAccent map
+  • Validação de formulário front-end: campos obrigatórios, feedback inline
+  • Scroll reveal: staggerReveal() com classList.add("is-visible") e delay
+  • Carrossel de imagens (home hero): autoplay 3,5s, prev/next, dots, pausa ao clicar
+
+Funcionalidades NÃO implementadas:
+  • Submissão real do formulário para backend (simula sucesso no front)
+  • Envio de e-mail ou integração com CRM
+  • Analytics / rastreamento (sem GA4, GTM ou Hotjar)
+  • Meta tags Open Graph e Twitter Card (ausentes)
+  • Sitemap.xml e robots.txt (ausentes)
+
+--------------------------------------------------------------------------------
+18. DESIGN & UX DECISIONS (PARA FUTURAS REVISÕES)
+--------------------------------------------------------------------------------
+
+Responsividade — breakpoints declarados no CSS:
+  • 900px  — menu desktop esconde; mobile drawer ativa; hero passa para 1 coluna
+  • 800px  — grid-3 e grid-2-asym colapsam para 1 coluna
+  • 700px  — grid-cards-4 colapsa; flow horizontal vira vertical
+  • 640px  — vertical-hero passa para layout single-column
+  • 560px  — formulário de contato remove min-width fixo
+  Observação: responsividade planejada no CSS, não testada em dispositivos reais.
+
+Paleta de cores (variáveis CSS em :root):
+  • --verde-esmeralda : #10c87e  (destaque, CTAs secundários, ícones)
+  • --green-chumbo    : #012e20  (fundo dark, texto principal)
+  • --ice             : #f2f5f5  (fundo claro, seções --muted)
+  • --pure-white      : #ffffff
+  • --ambiental       : #013220  (accent vertical)
+  • --industrial      : #002366  (accent vertical)
+  • --logistica       : #ff8c00  (accent vertical)
+  • --smart-cities    : #6200ee  (accent vertical)
+  • --alert-soft      : #e8a849  (cards de problema / dor)
+
+Tipografia:
+  • Headings : Space Grotesk (weights 500, 600, 700) — via Google Fonts
+  • Body      : Inter (weights 400, 500, 600, 700) — via Google Fonts
+  • Fallback  : system-ui, sans-serif
+
+CSS extras (adicionados maio/2026):
+  • Carrossel (.carousel, .carousel__track, .carousel__slide, .carousel__btn,
+    .carousel__dot) — styles.css
+  • Overrides para .hero-visual .carousel (position: absolute; inset: 0;
+    object-fit: contain) — styles.css
+  • Overrides de espaçamento para [data-view="tecnologia"] .section — styles.css
+  • .footer-logo { display: block; max-height: 2rem; width: auto; ... } — styles.css
+  • .form-contato[hidden] { display: none } — fix para formulário visível em todas
+    as páginas — styles.css
+
+Estratégia de CTAs (estado após reconstrução maio/2026):
+  • Home          → 1 CTA no hero + 1 CTA no final (máx. 2)
+  • Cada vertical → 1 CTA no hero (formulário de PoC removido do corpo das verticais)
+  • Tecnologia    → 1 CTA no final ("Agendar PoC (Custo Zero)")
+  • Sobre         → 1 CTA no final ("Agendar Diagnóstico Gratuito")
+  • Contato       → formulário (destino final de todos os CTAs)
+  • Footer        → 0 CTAs diretos
+
+Padrão de seções das verticais (todas seguem):
+  Hero → Desafios → Módulos → Escopo (ODS/conformidade) → Implantação (standalone)
+  • Confirmado em: Ambiental, Industrial, Logística, Smart Cities
+  • Desvio: Logística usa imagem Unsplash no hero (não asset local)
+
+Componentes de UI reutilizáveis identificados:
+  • .challenge-card   — cards de desafio/dor com ícone SVG
+  • .module-row       — linha alternada imagem + texto para cada módulo
+  • .vertical-hero    — hero padronizado com scan-line, badges e faixa decorativa
+  • .section-head     — label + H2 com margin-bottom consistente
+  • .flow / .flow-step — pipeline visual horizontal (Capture → Analise → Aja)
+  • .impl-card        — card standalone de Implantação (sem wrapper split-banner)
+  • .shell--narrow    — coluna de conteúdo centralizada e mais estreita
+  • .section--dark    — fundo escuro (--green-chumbo), texto claro (--ice)
+  • .carousel         — carrossel: autoplay, dots, prev/next (hero home)
+
+--------------------------------------------------------------------------------
+19. CHECKLIST DE MELHORIAS PENDENTES (PRIORIDADE)
+--------------------------------------------------------------------------------
+
+Prioridade 1 — Crítica (bloqueia lançamento):
+  ☑ Adicionar copy faltante — módulo Ambiental EPI (concluído)
+  ☑ Adicionar copy faltante — módulo Industrial comportamento (concluído)
+  ☑ Expandir FAQ item LGPD com resposta completa (concluído)
+  ☑ Inserir imagens reais nas seções principais (concluído)
+  ☑ Reconstruir página Tecnologia com foco pragmático — 5 seções (concluído)
+  ☑ Reconstruir página Sobre — 6 seções concisas (concluído)
+  ☑ Corrigir formulário aparecendo em todas as páginas (concluído)
+  ☑ Padronizar capitalização "PoC" em todo o HTML (concluído)
+  ☑ Footer logo: substituir placeholder por imagem real (concluído)
+  ☐ Definir stack backend para formulário (atualmente validação JS apenas)
+
+Prioridade 2 — Alta (impacta confiança e conformidade):
+  ☐ Criar links reais para Política de Privacidade e Termos de Uso
+  ☐ Adicionar copy de consentimento LGPD junto ao formulário de contato
+  ☐ Testar responsividade em dispositivos reais (mobile/tablet)
+  ☐ Reavaliar inclusão da seção Equipe (Rael/Iuri/Demétrius) na página Sobre
+
+Prioridade 3 — Média (melhoria de performance e alcance):
+  ☐ Integração real com CRM/Email (HubSpot, Zapier, SendGrid, etc.)
+  ☐ Analytics e rastreamento (Google Analytics 4, Hotjar ou similar)
+  ☐ Otimização SEO: meta descriptions, Open Graph, Twitter Card, canonical
+  ☐ Substituir imagem Unsplash da Logística (hero) por asset da marca
+  ☐ Substituir fotos do carrossel (hero home) por assets definitivos da marca
+  ☐ Adicionar sitemap.xml e robots.txt
+  ☐ Painel de incentivo lateral ao formulário de contato (layout 2 colunas)
+
+================================================================================
+FIM DO DOCUMENTO
+================================================================================

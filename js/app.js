@@ -168,6 +168,36 @@
       });
     });
 
+    // Carousel
+    document.querySelectorAll(".carousel").forEach((carousel) => {
+      const slides = carousel.querySelectorAll(".carousel__slide");
+      const dots = carousel.querySelectorAll(".carousel__dot");
+      let current = 0;
+      let timer;
+
+      function goTo(index) {
+        slides[current].classList.remove("is-active");
+        dots[current].classList.remove("is-active");
+        current = (index + slides.length) % slides.length;
+        slides[current].classList.add("is-active");
+        dots[current].classList.add("is-active");
+      }
+
+      function startAuto() {
+        timer = setInterval(() => goTo(current + 1), 3500);
+      }
+
+      function resetAuto() {
+        clearInterval(timer);
+        startAuto();
+      }
+
+      carousel.querySelector(".carousel__btn--prev").addEventListener("click", () => { goTo(current - 1); resetAuto(); });
+      carousel.querySelector(".carousel__btn--next").addEventListener("click", () => { goTo(current + 1); resetAuto(); });
+      dots.forEach((dot, i) => dot.addEventListener("click", () => { goTo(i); resetAuto(); }));
+      startAuto();
+    });
+
     showView(pathToName());
   });
 })();

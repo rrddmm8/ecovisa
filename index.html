@@ -96,16 +96,36 @@
                   <button type="button" class="btn btn-primary" data-route="contato">
                     Iniciar Prova de Conceito (Custo Zero)
                   </button>
-                  <button type="button" class="btn btn-secondary" data-route="contato">
-                    Agendar uma reunião
-                  </button>
                 </div>
               </div>
               <div class="hero-visual" aria-label="Visual do hero (vídeo em loop sugerido no wireframe)">
                 <span class="scan-line"></span>
                 <span class="bb-box">Status: Ocioso</span>
                 <span class="bb-box">Nível: 85%</span>
-                <div class="placeholder-label">(inserir imagem)</div>
+                <div class="carousel" aria-label="Módulos Ecovisa">
+                  <div class="carousel__track">
+                    <figure class="carousel__slide is-active">
+                      <img src="imagens/imagem%20dos%20modulos/ambiental/ambiental%20-%20modulo%20transbordo.png" alt="Módulo Transbordo — Ambiental" loading="lazy">
+                    </figure>
+                    <figure class="carousel__slide">
+                      <img src="imagens/imagem%20dos%20modulos/industrial/industrial%20-%20modulo%20controle%20de%20qualidade.png" alt="Módulo Controle de Qualidade — Industrial" loading="lazy">
+                    </figure>
+                    <figure class="carousel__slide">
+                      <img src="imagens/imagem%20dos%20modulos/industrial/industrial%20-%20modulo%20produtividade%20e%20controle.png" alt="Módulo Produtividade e Controle — Industrial" loading="lazy">
+                    </figure>
+                    <figure class="carousel__slide">
+                      <img src="imagens/imagem%20dos%20modulos/smart%20cities/smart%20cities%20-%20modulo%20analise%20de%20transito.png" alt="Módulo Análise de Trânsito — Smart Cities" loading="lazy">
+                    </figure>
+                  </div>
+                  <button class="carousel__btn carousel__btn--prev" aria-label="Anterior">&#8592;</button>
+                  <button class="carousel__btn carousel__btn--next" aria-label="Próximo">&#8594;</button>
+                  <div class="carousel__dots">
+                    <button class="carousel__dot is-active" aria-label="Slide 1"></button>
+                    <button class="carousel__dot" aria-label="Slide 2"></button>
+                    <button class="carousel__dot" aria-label="Slide 3"></button>
+                    <button class="carousel__dot" aria-label="Slide 4"></button>
+                  </div>
+                </div>
               </div>
             </div>
           </section>
@@ -465,7 +485,9 @@
             <div class="shell">
               <div class="grid-2-asym">
                 <div>
-                  <div class="img-placeholder">(inserir imagem)</div>
+                  <figure class="section-figure">
+                    <img src="imagens/gerais/home-diferencial-transversal.png" alt="Diferencial Transversal — Produtividade com IA Visual" loading="lazy">
+                  </figure>
                 </div>
                 <div>
                   <h2>Diferencial Transversal: Produtividade &amp; IA Visual</h2>
@@ -474,7 +496,6 @@
                     operacionais, otimizando fluxos de trabalho e liberando sua equipe para focar em
                     tarefas estratégicas.
                   </p>
-                  <button type="button" class="btn btn-ghost" data-route="contato">Agendar PoC</button>
                 </div>
               </div>
             </div>
@@ -545,7 +566,17 @@
                     A solução trata dados e imagens com responsabilidade?
                   </button>
                   <div class="faq__panel" id="faq-p4" role="region" aria-labelledby="faq-b4" hidden>
-                    <p>Segurança de Dados e LGPD.</p>
+                    <p>Privacidade e segurança de dados são inegociáveis na Ecovisa. Nós NÃO armazenamos,
+                    vendemos ou compartilhamos imagens ou dados operacionais de clientes. Suas imagens
+                    permanecem sob seu controle total em todo momento.</p>
+                    <p>Durante a Prova de Conceito, processamos apenas frames necessários para treinar
+                    modelos personalizados para sua operação — nunca reutilizados para outros clientes.
+                    Todos os resultados analíticos (relatórios, dashboards, dados de saída) pertencem
+                    integralmente a você.</p>
+                    <p>Nossa arquitetura está em conformidade com a Lei Geral de Proteção de Dados (LGPD).
+                    Quando imagens contêm indivíduos identificáveis, a análise é comportamental agregada,
+                    não por identificação individual. Cada engajamento começa com um Plano de Trabalho
+                    escrito que detalha exatamente o que acessamos e como tratamos seus dados.</p>
                   </div>
                 </div>
                 <div class="faq__item">
@@ -571,14 +602,6 @@
             </div>
           </section>
 
-          <section class="section section--dark section--cta-final">
-            <div class="shell text-center">
-              <h2>Vamos transformar suas imagens em dados? Inicie sua POC.</h2>
-              <button type="button" class="btn btn-primary btn--lg" data-route="contato">
-                Agendar PoC
-              </button>
-            </div>
-          </section>
         </article>
 
         <!-- AMBIENTAL -->
@@ -624,7 +647,7 @@
               <div class="vertical-hero__media reveal">
                 <div class="vertical-hero__frame">
                   <img
-                    src="imagens/ambiental/ambiental%20-%20modulo%20triagem.png"
+                    src="imagens/imagem%20dos%20modulos/ambiental/ambiental%20-%20modulo%20triagem.png"
                     alt="Triagem de resíduos com visão computacional e auditoria visual Ecovisa"
                     width="1600"
                     height="1200"
@@ -674,7 +697,7 @@
                   </div>
                   <h3 class="challenge-card__title">Risco de Compliance</h3>
                   <p class="challenge-card__text">
-                    Sem dados visuais, sua operação é um “buraco negro” de incertezas e riscos
+                    Sem dados visuais, sua operação é um &ldquo;buraco negro&rdquo; de incertezas e riscos
                     jurídicos frente a normas como a NR 38.
                   </p>
                 </article>
@@ -715,7 +738,7 @@
                   <div class="module-row__visual">
                     <figure>
                       <img
-                        src="imagens/ambiental/ambiental%20-%20modulo%20transbordo.png"
+                        src="imagens/imagem%20dos%20modulos/ambiental/ambiental%20-%20modulo%20transbordo.png"
                         alt="Visualização do módulo de transbordo com detecções da Ecovisa"
                         loading="lazy"
                       />
@@ -735,7 +758,7 @@
                   <div class="module-row__visual">
                     <figure>
                       <img
-                        src="imagens/ambiental/ambiental%20-%20modulo%20coleta.png"
+                        src="imagens/imagem%20dos%20modulos/ambiental/ambiental%20-%20modulo%20coleta.png"
                         alt="Visualização do módulo de coleta com detecções da Ecovisa"
                         loading="lazy"
                       />
@@ -755,7 +778,7 @@
                   <div class="module-row__visual">
                     <figure>
                       <img
-                        src="imagens/ambiental/ambiental%20-%20modulo%20triagem.png"
+                        src="imagens/imagem%20dos%20modulos/ambiental/ambiental%20-%20modulo%20triagem.png"
                         alt="Visualização do módulo de triagem com detecções da Ecovisa"
                         loading="lazy"
                       />
@@ -766,12 +789,16 @@
                   <div class="module-row__content">
                     <span class="module-row__tag">Módulo</span>
                     <h3>Módulo — Uso de EPI e comportamento desviantes</h3>
-                    <p>(Adicionar descrição do módulo)</p>
+                    <p>Monitore continuamente o uso de equipamentos de proteção individual (EPI) e
+                    detecte comportamentos não conformes ou desviantes no ambiente operacional.
+                    Nossos algoritmos identificam violações de segurança em tempo real — capacete,
+                    luvas, colete, botas de proteção — gerando alertas automatizados para a equipe
+                    de segurança e auditoria contínua sem parar a operação.</p>
                   </div>
                   <div class="module-row__visual">
                     <figure>
                       <img
-                        src="imagens/ambiental/ambiental%20-%20modulo%20seguranca.png"
+                        src="imagens/imagem%20dos%20modulos/ambiental/ambiental%20-%20modulo%20seguranca.png"
                         alt="Visualização do módulo de uso de EPI e segurança com detecções da Ecovisa"
                         loading="lazy"
                       />
@@ -815,25 +842,13 @@
 
           <section class="section vertical-section vertical-section--tint">
             <div class="shell">
-              <div class="split-banner">
-                <div class="impl-card reveal">
-                  <h2>Implantação</h2>
-                  <p>
-                    Conectamos nossa IA diretamente nos pontos críticos da sua linha de triagem. Em até
-                    15 dias, sua equipe recebe dashboards de produtividade e pureza sem necessidade de
-                    novos sensores.
-                  </p>
-                </div>
-                <div class="vertical-cta reveal">
-                  <div class="vertical-cta__inner">
-                    <h2>PoC</h2>
-                    <p>
-                      Validamos sua operação sem custos através de uma Prova de Conceito de 90 dias.
-                      Resultados visíveis e mensuráveis já nas primeiras 4 semanas.
-                    </p>
-                    <button type="button" class="btn btn-primary" data-route="contato">Agendar PoC</button>
-                  </div>
-                </div>
+              <div class="impl-card reveal">
+                <h2>Implantação</h2>
+                <p>
+                  Conectamos nossa IA diretamente nos pontos críticos da sua linha de triagem. Em até
+                  15 dias, sua equipe recebe dashboards de produtividade e pureza sem necessidade de
+                  novos sensores.
+                </p>
               </div>
             </div>
           </section>
@@ -871,13 +886,13 @@
                   autônoma.
                 </p>
                 <button type="button" class="btn btn-primary" data-route="contato">
-                  Agendar POC de 3 meses
+                  Agendar PoC de 3 meses
                 </button>
               </div>
               <div class="vertical-hero__media reveal">
                 <div class="vertical-hero__frame">
                   <img
-                    src="imagens/industrial/industrial%20-%20modulo%20produtividade%20e%20controle.png"
+                    src="imagens/imagem%20dos%20modulos/industrial/industrial%20-%20modulo%20produtividade%20e%20controle.png"
                     alt="Linha industrial com visão computacional Ecovisa — produtividade e controle"
                     width="1600"
                     height="1200"
@@ -967,7 +982,7 @@
                   <div class="module-row__visual">
                     <figure>
                       <img
-                        src="imagens/industrial/industrial%20-%20modulo%20produtividade%20e%20controle.png"
+                        src="imagens/imagem%20dos%20modulos/industrial/industrial%20-%20modulo%20produtividade%20e%20controle.png"
                         alt="Visualização do módulo de produtividade e controle"
                         loading="lazy"
                       />
@@ -988,7 +1003,7 @@
                   <div class="module-row__visual">
                     <figure>
                       <img
-                        src="imagens/industrial/industrial%20-%20modulo%20controle%20de%20qualidade.png"
+                        src="imagens/imagem%20dos%20modulos/industrial/industrial%20-%20modulo%20controle%20de%20qualidade.png"
                         alt="Visualização do módulo de controle de qualidade visual"
                         loading="lazy"
                       />
@@ -1008,7 +1023,7 @@
                   <div class="module-row__visual">
                     <figure>
                       <img
-                        src="imagens/industrial/industrial%20-%20modulo%20seguranca%20e%20prevencao.png"
+                        src="imagens/imagem%20dos%20modulos/industrial/industrial%20-%20modulo%20seguranca%20e%20prevencao.png"
                         alt="Visualização do módulo de segurança e prevenção de acidentes"
                         loading="lazy"
                       />
@@ -1019,12 +1034,17 @@
                   <div class="module-row__content">
                     <span class="module-row__tag">Módulo</span>
                     <h3>Módulo — Comportamento de clientes e usuários</h3>
-                    <p>(Adicionar descrição do módulo)</p>
+                    <p>Analise padrões de comportamento visual em ambientes operacionais — desde
+                    fluxo de pessoas em áreas de trabalho até interações com equipamentos e
+                    infraestrutura. Utilize estes insights para otimizar layouts de fábrica,
+                    identificar gargalos humanos, melhorar segurança comportamental e treinar
+                    equipes com base em dados reais de operação. O escopo específico é
+                    co-definido com o cliente durante a Prova de Conceito.</p>
                   </div>
                   <div class="module-row__visual">
                     <figure>
                       <img
-                        src="imagens/industrial/industrial%20-%20modulo%20comportamento%20de%20cliente.png"
+                        src="imagens/imagem%20dos%20modulos/industrial/industrial%20-%20modulo%20comportamento%20de%20cliente.png"
                         alt="Visualização do módulo de comportamento de clientes e usuários"
                         loading="lazy"
                       />
@@ -1062,24 +1082,12 @@
 
           <section class="section vertical-section">
             <div class="shell">
-              <div class="split-banner">
-                <div class="impl-card reveal">
-                  <h2>Implantação</h2>
-                  <p>
-                    Integração direta com o VMS da fábrica. Sem necessidade de novos sensores, a
-                    inteligência é extraída puramente das câmeras que você já possui.
-                  </p>
-                </div>
-                <div class="vertical-cta reveal">
-                  <div class="vertical-cta__inner">
-                    <h2>PoC</h2>
-                    <p>
-                      Transforme produtividade em dados hoje. Implementação gratuita da PoC por até 3
-                      meses para validar o ganho de eficiência na sua planta.
-                    </p>
-                    <button type="button" class="btn btn-primary" data-route="contato">Agendar PoC</button>
-                  </div>
-                </div>
+              <div class="impl-card reveal">
+                <h2>Implantação</h2>
+                <p>
+                  Integração direta com o VMS da fábrica. Sem necessidade de novos sensores, a
+                  inteligência é extraída puramente das câmeras que você já possui.
+                </p>
               </div>
             </div>
           </section>
@@ -1122,10 +1130,8 @@
               <div class="vertical-hero__media reveal">
                 <div class="vertical-hero__frame">
                   <img
-                    src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&amp;fit=crop&amp;w=1600&amp;q=82"
-                    alt="Centro de distribuição e docas — monitoramento visual para pátio e carga"
-                    width="1600"
-                    height="1067"
+                    src="imagens/gerais/logistica-hero.png"
+                    alt="Otimização de pátios e inspeção de cargas — Logística com IA"
                     decoding="async"
                   />
                   <div class="vertical-hero__scan" aria-hidden="true"></div>
@@ -1206,7 +1212,9 @@
                     </p>
                   </div>
                   <div class="module-row__visual">
-                    <div class="img-placeholder">(inserir imagem)</div>
+                    <figure class="section-figure">
+                      <img src="imagens/gerais/logistica-modulo-docas-patio.png" alt="Módulo Otimização de Docas e Pátio" loading="lazy">
+                    </figure>
                   </div>
                 </article>
                 <article class="module-row reveal">
@@ -1219,7 +1227,9 @@
                     </p>
                   </div>
                   <div class="module-row__visual">
-                    <div class="img-placeholder">(inserir imagem)</div>
+                    <figure class="section-figure">
+                      <img src="imagens/gerais/logistica-modulo-conferencia-carga.png" alt="Módulo Conferência Automatizada de Carga" loading="lazy">
+                    </figure>
                   </div>
                 </article>
                 <article class="module-row reveal">
@@ -1232,7 +1242,9 @@
                     </p>
                   </div>
                   <div class="module-row__visual">
-                    <div class="img-placeholder">(inserir imagem)</div>
+                    <figure class="section-figure">
+                      <img src="imagens/gerais/logistica-modulo-vigilancia-ativos.png" alt="Módulo Vigilância de Ativos e Integridade" loading="lazy">
+                    </figure>
                   </div>
                 </article>
               </div>
@@ -1267,24 +1279,12 @@
 
           <section class="section vertical-section">
             <div class="shell">
-              <div class="split-banner">
-                <div class="impl-card reveal">
-                  <h2>Implantação</h2>
-                  <p>
-                    Conectamos nossa IA ao seu sistema de CFTV atual para capturar, processar e entregar
-                    insights através de APIs ou dashboards.
-                  </p>
-                </div>
-                <div class="vertical-cta reveal">
-                  <div class="vertical-cta__inner">
-                    <h2>PoC</h2>
-                    <p>
-                      Valide o ROI da sua operação logística em tempo recorde. Solicite uma PoC de 90
-                      dias com implementação simplificada.
-                    </p>
-                    <button type="button" class="btn btn-primary" data-route="contato">Agendar PoC</button>
-                  </div>
-                </div>
+              <div class="impl-card reveal">
+                <h2>Implantação</h2>
+                <p>
+                  Conectamos nossa IA ao seu sistema de CFTV atual para capturar, processar e entregar
+                  insights através de APIs ou dashboards.
+                </p>
               </div>
             </div>
           </section>
@@ -1324,7 +1324,7 @@
               <div class="vertical-hero__media reveal">
                 <div class="vertical-hero__frame">
                   <img
-                    src="imagens/smart%20cities/smart%20cities%20-%20modulo%20analise%20de%20transito.png"
+                    src="imagens/imagem%20dos%20modulos/smart%20cities/smart%20cities%20-%20modulo%20analise%20de%20transito.png"
                     alt="Fluxo urbano e análise de trânsito com visão computacional Ecovisa"
                     width="1600"
                     height="1200"
@@ -1412,7 +1412,7 @@
                   <div class="module-row__visual">
                     <figure>
                       <img
-                        src="imagens/smart%20cities/smart%20cities%20-%20modulo%20analise%20de%20transito.png"
+                        src="imagens/imagem%20dos%20modulos/smart%20cities/smart%20cities%20-%20modulo%20analise%20de%20transito.png"
                         alt="Visualização do módulo de análise de trânsito e fluxo em ruas e avenidas"
                         loading="lazy"
                       />
@@ -1432,7 +1432,7 @@
                   <div class="module-row__visual">
                     <figure>
                       <img
-                        src="imagens/smart%20cities/smart%20cities%20-%20modulo%20analise%20de%20cruzamento.png"
+                        src="imagens/imagem%20dos%20modulos/smart%20cities/smart%20cities%20-%20modulo%20analise%20de%20cruzamento.png"
                         alt="Visualização do módulo de análise de cruzamentos e interseções ferroviárias"
                         loading="lazy"
                       />
@@ -1452,7 +1452,7 @@
                   <div class="module-row__visual">
                     <figure>
                       <img
-                        src="imagens/smart%20cities/smart%20cities%20-%20modulo%20controle%20de%20ocupacao.png"
+                        src="imagens/imagem%20dos%20modulos/smart%20cities/smart%20cities%20-%20modulo%20controle%20de%20ocupacao.png"
                         alt="Visualização do módulo de controle de ocupação de vagas públicas"
                         loading="lazy"
                       />
@@ -1471,7 +1471,7 @@
                   <div class="module-row__visual">
                     <figure>
                       <img
-                        src="imagens/smart%20cities/smart%20cities%20-%20modulo%20deteccao%20de%20invasao%20de%20faixa.png"
+                        src="imagens/imagem%20dos%20modulos/smart%20cities/smart%20cities%20-%20modulo%20deteccao%20de%20invasao%20de%20faixa.png"
                         alt="Visualização do módulo de detecção de invasão de faixa por vegetação"
                         loading="lazy"
                       />
@@ -1510,24 +1510,12 @@
 
           <section class="section vertical-section">
             <div class="shell">
-              <div class="split-banner">
-                <div class="impl-card reveal">
-                  <h2>Implantação</h2>
-                  <p>
-                    Utilizamos a rede de câmeras de monitoramento municipal (CICC) já existente.
-                    Dados centralizados em dashboards estratégicos para gestão baseada em evidências.
-                  </p>
-                </div>
-                <div class="vertical-cta reveal">
-                  <div class="vertical-cta__inner">
-                    <h2>PoC</h2>
-                    <p>
-                      Modernize sua gestão pública sem custos iniciais de licenciamento. Solicite uma
-                      PoC de até 90 dias para validar a inteligência urbana na prática
-                    </p>
-                    <button type="button" class="btn btn-primary" data-route="contato">Agendar PoC</button>
-                  </div>
-                </div>
+              <div class="impl-card reveal">
+                <h2>Implantação</h2>
+                <p>
+                  Utilizamos a rede de câmeras de monitoramento municipal (CICC) já existente.
+                  Dados centralizados em dashboards estratégicos para gestão baseada em evidências.
+                </p>
               </div>
             </div>
           </section>
@@ -1535,226 +1523,409 @@
 
         <!-- TECNOLOGIA -->
         <article data-view="tecnologia" hidden>
-          <section class="section section--dark">
-            <div class="shell grid-2-asym">
-              <div>
-                <h1>Não é mágica. É visão computacional aplicada ao mundo real.</h1>
-                <p class="hero-lead">
-                  A Ecovisa combina modelos de IA treinados para ambientes operacionais reais com a
-                  infraestrutura de câmeras que você já possui. Sem caixas-pretas. Sem promessas vazias.
-                  Só resultado auditável.
-                </p>
-                <button type="button" class="btn btn-primary" data-route="contato">
-                  Agendar PoC gratuita
-                </button>
-              </div>
-              <div>
-                <div class="img-placeholder">
-                  Visual recomendado: câmera de segurança com linhas de análise, bounding boxes e dados.
-                </div>
-              </div>
-            </div>
-          </section>
 
-          <section class="section">
+          <!-- 1. INTRO -->
+          <!-- 1. INTRO -->
+          <section class="section section--dark" style="padding: clamp(2.5rem, 6vw, 4rem) 0;">
             <div class="shell">
-              <header class="section-head reveal">
-                <span class="section-head__label">O “Cérebro” Ecovisa</span>
-                <h2>Como a Ecovisa enxerga o que o olho humano não consegue acompanhar</h2>
-              </header>
-              <div class="grid-2-asym">
+              <div style="display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center;">
                 <div>
-                  <p>
-                    Nossa plataforma aplica modelos de visão computacional sobre o fluxo de vídeo em tempo
-                    real. Cada frame é analisado por redes neurais treinadas para detectar padrões operacionais
-                    específicos — um equipamento ocioso, um EPI ausente, um veículo fora de posição, um resíduo
-                    descartado incorretamente. O sistema não assiste ao vídeo: ele lê a operação.
+                  <p style="font-size:0.85rem;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:#10c87e;margin:0 0 1rem;">Como Funciona</p>
+                  <h1 style="margin:0 0 1.5rem;color:#fff;font-size:clamp(1.9rem,4vw,2.6rem);line-height:1.1;">Tecnologia Simples Para Operações Reais</h1>
+                  <p style="font-size:1.05rem;line-height:1.75;color:rgba(242,245,245,0.9);margin:0;">
+                    Não é magia. É visão computacional aplicada às câmeras que você já tem. Capturamos imagens do seu ambiente, processamos em tempo real com IA treinada no seu contexto específico, e entregamos inteligência acionável direto no seu dashboard ou ERP. Sem hardware novo, sem integração complexa, sem espera.
                   </p>
                 </div>
-                <div class="img-placeholder">
-                  Infográfico “Como a IA Vê”: câmera passiva x câmera + Ecovisa → análise → detecção → ação.
+                <div style="border-radius:20px;overflow:hidden;box-shadow:0 20px 50px rgba(1,46,32,0.3);">
+                  <img src="imagens/gerais/tecnologia-hero-novo.png" alt="Plataforma Ecovisa em operação" style="width:100%;height:auto;display:block;" onerror="this.src='imagens/gerais/tecnologia-hero.png'">
                 </div>
               </div>
             </div>
           </section>
 
-          <section class="section section--tint">
-            <div class="shell">
-              <header class="section-head reveal">
-                <span class="section-head__label">Arquitetura</span>
-                <h2>Da câmera ao dashboard: o fluxo completo</h2>
+          <!-- 2. COMO FUNCIONA -->
+          <section class="section" style="background:#f2f5f5;">
+            <div class="shell shell--narrow">
+              <header class="section-head">
+                <span class="section-head__label">O Processo</span>
+                <h2 style="color:#012e20;">Do Seu Ambiente Para Seus Resultados</h2>
               </header>
-              <div class="flow flow--modern" aria-label="Fluxo de captura, análise e ação">
-                <div class="flow-step">
-                  <strong>Câmeras CFTV existentes</strong>
+
+              <!-- 3 etapas -->
+              <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.5rem;margin-bottom:2.5rem;">
+                <div style="padding:1.75rem;border-radius:16px;background:#fff;border:1px solid rgba(1,46,32,0.08);">
+                  <div class="icon-box icon-box--light" aria-hidden="true" style="margin-bottom:0.75rem;">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z"/><circle cx="12" cy="13" r="4"/></svg>
+                  </div>
+                  <h3 style="color:#012e20;margin:0 0 0.6rem;font-size:1rem;">Etapa 1 &mdash; Captura</h3>
+                  <p style="color:#2a4038;font-size:0.95rem;line-height:1.6;margin:0;">Conectamos a câmeras IP, CFTV, drones ou VMS que você já tem instalados. Sem troca, sem obra, sem custo. Se não tem câmera, um smartphone funciona.</p>
                 </div>
-                <span class="flow-arrow" aria-hidden="true">→</span>
-                <div class="flow-step">
-                  <strong>Captura de stream de vídeo</strong>
+                <div style="padding:1.75rem;border-radius:16px;background:#fff;border:1px solid rgba(1,46,32,0.08);">
+                  <div class="icon-box icon-box--light" aria-hidden="true" style="margin-bottom:0.75rem;">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><path d="M9 1v3M15 1v3M9 20v3M15 20v3M1 9h3M1 15h3M20 9h3M20 15h3"/></svg>
+                  </div>
+                  <h3 style="color:#012e20;margin:0 0 0.6rem;font-size:1rem;">Etapa 2 &mdash; Processamento &amp; IA</h3>
+                  <p style="color:#2a4038;font-size:0.95rem;line-height:1.6;margin:0;">Modelo de IA especializado analisa cada frame em tempo real. Detecta padrões, identifica anomalias, classifica objetos. Roda localmente quando possível; na nuvem segura quando necessário.</p>
                 </div>
-                <span class="flow-arrow" aria-hidden="true">→</span>
-                <div class="flow-step">
-                  <strong>Modelos de IA Ecovisa — inferência em tempo real</strong>
-                </div>
-                <span class="flow-arrow" aria-hidden="true">→</span>
-                <div class="flow-step">
-                  <strong>Motor de regras + alertas configuráveis</strong>
-                </div>
-                <span class="flow-arrow" aria-hidden="true">→</span>
-                <div class="flow-step">
-                  <strong>Dashboard / API / ERP / Webhook</strong>
-                </div>
-              </div>
-              <div class="grid-2-asym" style="margin-top: 1.5rem; gap: 2rem;">
-                <div>
-                  <ul>
-                    <li><strong>Captura:</strong> compatível com qualquer câmera IP ou analógica com conversor. Sem troca de hardware.</li>
-                    <li><strong>Processamento:</strong> modelos treinados por vertical — Ambiental, Industrial, Logística, Smart Cities.</li>
-                    <li><strong>Inferência:</strong> detecção de objetos, classificação de comportamento, contagem e rastreamento de trajetória.</li>
-                    <li><strong>Alertas:</strong> notificações em tempo real via e-mail, SMS, webhook ou painel.</li>
-                    <li><strong>Integração:</strong> saída via API REST (JSON) pronta para conectar ao seu ERP ou sistema de gestão.</li>
-                  </ul>
-                </div>
-                <div class="img-placeholder">
-                  Fluxograma horizontal recomendado: capture → analise → aja.
+                <div style="padding:1.75rem;border-radius:16px;background:#fff;border:1px solid rgba(1,46,32,0.08);">
+                  <div class="icon-box icon-box--light" aria-hidden="true" style="margin-bottom:0.75rem;">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18M7 16l4-4 4 4 6-7"/></svg>
+                  </div>
+                  <h3 style="color:#012e20;margin:0 0 0.6rem;font-size:1rem;">Etapa 3 &mdash; Entrega de Inteligência</h3>
+                  <p style="color:#2a4038;font-size:0.95rem;line-height:1.6;margin:0;">Relatórios automáticos, dashboards interativos, alertas em tempo real. Integra direto com seu ERP, CRM ou BI. Seus dados, suas regras. LGPD garantida.</p>
                 </div>
               </div>
+
+              <!-- SVG pipeline 3 etapas -->
+              <div style="padding:2rem;border-radius:16px;background:#fff;border:1px solid rgba(1,46,32,0.08);margin-bottom:1.5rem;">
+                <svg viewBox="0 0 800 140" style="width:100%;height:auto;" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Fluxo Ecovisa: Câmera ao ERP">
+                  <defs>
+                    <marker id="arrowflow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+                      <polygon points="0 0, 10 3, 0 6" fill="#10c87e"/>
+                    </marker>
+                  </defs>
+                  <!-- Box 1 -->
+                  <rect x="20" y="30" width="200" height="80" rx="12" fill="rgba(16,200,126,0.08)" stroke="#10c87e" stroke-width="1.5"/>
+                  <text x="120" y="65" font-size="13" font-weight="700" text-anchor="middle" fill="#012e20" font-family="system-ui,sans-serif">CÂMERA</text>
+                  <text x="120" y="86" font-size="11" text-anchor="middle" fill="#2a4038" font-family="system-ui,sans-serif">IP · CFTV · Drone</text>
+                  <!-- Arrow 1 -->
+                  <line x1="222" y1="70" x2="278" y2="70" stroke="#10c87e" stroke-width="2" marker-end="url(#arrowflow)"/>
+                  <!-- Box 2 -->
+                  <rect x="280" y="30" width="240" height="80" rx="12" fill="rgba(16,200,126,0.08)" stroke="#10c87e" stroke-width="1.5"/>
+                  <text x="400" y="65" font-size="13" font-weight="700" text-anchor="middle" fill="#012e20" font-family="system-ui,sans-serif">IA ECOVISA</text>
+                  <text x="400" y="86" font-size="11" text-anchor="middle" fill="#2a4038" font-family="system-ui,sans-serif">Análise · Detecção · Alerta</text>
+                  <!-- Arrow 2 -->
+                  <line x1="522" y1="70" x2="578" y2="70" stroke="#10c87e" stroke-width="2" marker-end="url(#arrowflow)"/>
+                  <!-- Box 3 -->
+                  <rect x="580" y="30" width="200" height="80" rx="12" fill="rgba(16,200,126,0.08)" stroke="#10c87e" stroke-width="1.5"/>
+                  <text x="680" y="65" font-size="13" font-weight="700" text-anchor="middle" fill="#012e20" font-family="system-ui,sans-serif">DASHBOARD</text>
+                  <text x="680" y="86" font-size="11" text-anchor="middle" fill="#2a4038" font-family="system-ui,sans-serif">ERP · CRM · BI</text>
+                </svg>
+              </div>
+              <!-- Imagem de integração: IA → ERP / CRM / BI -->
+              <img src="imagens/gerais/tecnologia-integracao.png" alt="Fluxo de integração — Dados saindo da IA para ERP, CRM, dashboards e APIs" style="width:100%;height:auto;border-radius:20px;display:block;">
             </div>
           </section>
 
-          <section class="section">
-            <div class="shell grid-2-asym">
-              <div>
-                <header class="section-head reveal">
-                  <span class="section-head__label">Hardware Agnóstico</span>
-                  <h2>Funciona com o que você já tem. Ponto.</h2>
-                </header>
-                <p>
-                  A Ecovisa é agnóstica de hardware. Isso significa que não importa a marca, resolução ou protocolo
-                  das suas câmeras — nossa plataforma se adapta à sua infraestrutura, não o contrário. Instalamos,
-                  calibramos e entregamos inteligência. Você não precisa abrir uma licitação para trocar equipamento.
-                </p>
-              </div>
-              <div class="img-placeholder">
-                Diagrama de compatibilidade: hub Ecovisa conectado a câmeras IP, analógicas, PTZ, NVR legado e nuvem.
-                Se grava vídeo, a Ecovisa analisa.
-              </div>
-            </div>
-          </section>
-
-          <section class="section section--tint">
-            <div class="shell grid-2-asym">
-              <div>
-                <header class="section-head reveal">
-                  <span class="section-head__label">Segurança</span>
-                  <h2>Seus dados ficam onde devem. Protegidos e auditáveis.</h2>
-                </header>
-                <p>
-                  A Ecovisa trata imagens como ativo sensível — porque são. Nossa arquitetura foi desenhada com
-                  privacidade desde o início (privacy by design):
-                </p>
-                <ul>
-                  <li>Processamento local ou em nuvem privada: as imagens não trafegam para servidores terceiros sem sua autorização.</li>
-                  <li>Anonimização de rostos: quando aplicável, faces são desfocadas automaticamente antes de qualquer armazenamento.</li>
-                  <li>Retenção configurável: você define por quanto tempo os frames são retidos — ou se são retidos.</li>
-                  <li>Conformidade LGPD: relatório de impacto disponível para auditorias. Nenhum dado é comercializado.</li>
-                  <li>Acesso com controle por perfil: cada usuário vê apenas o que precisa ver.</li>
-                </ul>
-              </div>
-              <div class="img-placeholder">
-                Trust bar visual: ícones de cadeado, escudo, relógio e anonimização em fundo escuro.
-              </div>
-            </div>
-          </section>
-
-          <section class="section">
-            <div class="shell grid-2-asym">
-              <div>
-                <header class="section-head reveal">
-                  <span class="section-head__label">Integração</span>
-                  <h2>Sua operação já tem sistemas. A Ecovisa fala com eles.</h2>
-                </header>
-                <p>
-                  A plataforma expõe uma API REST documentada com payloads em JSON. Cada evento detectado
-                  — uma não-conformidade, um veículo na doca, um alerta de EPI — pode disparar um webhook,
-                  alimentar um dashboard customizado ou gravar um registro no seu ERP. Integrações já realizadas
-                  com sistemas de gestão industrial, plataformas de BI e sistemas municipais de monitoramento.
-                </p>
-              </div>
-              <div class="img-placeholder">
-                Diagrama de integração: Ecovisa Platform → API REST / JSON → ERP | Dashboard | BI Tool | Webhook.
-              </div>
-            </div>
-          </section>
-
+          <!-- 3. PROVA DE CONCEITO -->
           <section class="section section--dark">
-            <div class="shell text-center">
-              <h2>A melhor forma de entender a tecnologia é vê-la funcionando na sua operação.</h2>
-              <p class="hero-lead">
-                Em 90 dias de PoC, você valida na prática — com suas câmeras, no seu ambiente, com seus dados.
-              </p>
-              <button type="button" class="btn btn-primary" data-route="contato">
-                Agendar PoC gratuita
-              </button>
+            <div class="shell shell--narrow">
+              <header class="section-head">
+                <span class="section-head__label">PoC</span>
+                <h2>90 Dias Para Validar Seu ROI (Custo Zero)</h2>
+              </header>
+              <p style="color:rgba(242,245,245,0.85);font-size:1.05rem;line-height:1.7;margin-bottom:2rem;">Sem risco, sem compromisso, com resultado.</p>
+              <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.5rem;margin-bottom:2rem;">
+                <div style="padding:1.75rem;border-radius:14px;background:rgba(16,200,126,0.07);border:1px solid rgba(16,200,126,0.18);">
+                  <div class="icon-box icon-box--dark" aria-hidden="true" style="margin-bottom:0.75rem;">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+                  </div>
+                  <h3 style="color:#10c87e;margin:0 0 0.5rem;font-size:1rem;">Fase 1 &mdash; Diagnóstico</h3>
+                  <p style="font-size:0.8rem;font-weight:600;color:rgba(255,255,255,0.6);margin:0 0 0.75rem;text-transform:uppercase;letter-spacing:0.08em;">Semana 1 &mdash; Custo Zero</p>
+                  <p style="color:rgba(242,245,245,0.85);font-size:0.95rem;line-height:1.6;margin:0;">Conversamos com seus gestores. Entendemos seus gargalos, desafios, métricas. Você sai com clareza do que é possível. Sem nenhum custo.</p>
+                </div>
+                <div style="padding:1.75rem;border-radius:14px;background:rgba(16,200,126,0.07);border:1px solid rgba(16,200,126,0.18);">
+                  <div class="icon-box icon-box--dark" aria-hidden="true" style="margin-bottom:0.75rem;">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 00-2.91-.09z"/><path d="M12 15l-3-3a22 22 0 012-3.95A12.88 12.88 0 0122 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 01-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/></svg>
+                  </div>
+                  <h3 style="color:#10c87e;margin:0 0 0.5rem;font-size:1rem;">Fase 2 &mdash; Implementação</h3>
+                  <p style="font-size:0.8rem;font-weight:600;color:rgba(255,255,255,0.6);margin:0 0 0.75rem;text-transform:uppercase;letter-spacing:0.08em;">Semanas 2&ndash;8 &mdash; Você Não Paga Nada</p>
+                  <p style="color:rgba(242,245,245,0.85);font-size:0.95rem;line-height:1.6;margin:0;">Instalamos a solução no seu ambiente com seus dados reais. Treinamos o modelo específico para seu contexto. Você só acompanha os primeiros resultados.</p>
+                </div>
+                <div style="padding:1.75rem;border-radius:14px;background:rgba(16,200,126,0.07);border:1px solid rgba(16,200,126,0.18);">
+                  <div class="icon-box icon-box--dark" aria-hidden="true" style="margin-bottom:0.75rem;">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                  </div>
+                  <h3 style="color:#10c87e;margin:0 0 0.5rem;font-size:1rem;">Fase 3 &mdash; Validação</h3>
+                  <p style="font-size:0.8rem;font-weight:600;color:rgba(255,255,255,0.6);margin:0 0 0.75rem;text-transform:uppercase;letter-spacing:0.08em;">Semanas 9&ndash;12 &mdash; Números na Mão</p>
+                  <p style="color:rgba(242,245,245,0.85);font-size:0.95rem;line-height:1.6;margin:0;">Você vê os resultados concretos: redução de custo em %, aumento de OEE em %. Números reais. Aí sim você decide: assina ou não.</p>
+                </div>
+              </div>
+              <div style="padding:1.25rem 1.75rem;border-radius:12px;background:rgba(16,200,126,0.12);border:1px solid rgba(16,200,126,0.3);text-align:center;">
+                <strong style="color:#10c87e;font-size:1.05rem;">Nenhum custo na PoC. Você só paga quando confirma que funciona.</strong>
+              </div>
             </div>
           </section>
+
+          <!-- 4. POR QUE COMEÇAR AGORA -->
+          <section class="section" style="background:#f2f5f5;">
+            <div class="shell shell--narrow">
+              <header class="section-head">
+                <span class="section-head__label">Por Que Agora?</span>
+                <h2 style="color:#012e20;">3 Motivos Para Agendar Sua PoC Hoje</h2>
+              </header>
+              <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.5rem;">
+                <div style="display:flex;gap:1rem;align-items:flex-start;padding:1.75rem;border-radius:16px;background:#fff;border:1px solid rgba(1,46,32,0.08);">
+                  <span style="font-size:2rem;flex-shrink:0;" aria-hidden="true">&#128176;</span>
+                  <div>
+                    <h3 style="color:#012e20;margin:0 0 0.5rem;font-size:1rem;">Sem Risco Financeiro</h3>
+                    <p style="color:#2a4038;font-size:0.9rem;line-height:1.6;margin:0;">PoC custo zero. Sem hardware, sem integração paga. Você valida o valor antes de qualquer compromisso.</p>
+                  </div>
+                </div>
+                <div style="display:flex;gap:1rem;align-items:flex-start;padding:1.75rem;border-radius:16px;background:#fff;border:1px solid rgba(1,46,32,0.08);">
+                  <span style="font-size:2rem;flex-shrink:0;" aria-hidden="true">&#9889;</span>
+                  <div>
+                    <h3 style="color:#012e20;margin:0 0 0.5rem;font-size:1rem;">Implementação Rápida</h3>
+                    <p style="color:#2a4038;font-size:0.9rem;line-height:1.6;margin:0;">90 dias até resultado completo. Primeira inteligência acionável em 4 semanas. Enquanto concorrentes planejam, você já colhe dados.</p>
+                  </div>
+                </div>
+                <div style="display:flex;gap:1rem;align-items:flex-start;padding:1.75rem;border-radius:16px;background:#fff;border:1px solid rgba(1,46,32,0.08);">
+                  <span style="font-size:2rem;flex-shrink:0;" aria-hidden="true">&#128295;</span>
+                  <div>
+                    <h3 style="color:#012e20;margin:0 0 0.5rem;font-size:1rem;">Usa Sua Infraestrutura</h3>
+                    <p style="color:#2a4038;font-size:0.9rem;line-height:1.6;margin:0;">Sem obra, sem parada de produção, sem investimento em câmeras. Conecta ao que você já tem. Simples.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- 5. CTA FINAL -->
+          <section class="section section--dark">
+            <div class="shell shell--narrow" style="text-align:center;">
+              <h2 style="color:#fff;margin-bottom:1rem;">Pronto Para Ver Sua Operação em Tempo Real?</h2>
+              <p style="font-size:1.05rem;line-height:1.75;color:rgba(242,245,245,0.85);margin-bottom:2rem;max-width:44ch;margin-left:auto;margin-right:auto;">Diagnóstico gratuito na semana 1. Sem compromisso, sem custo. Só descobrir o que é possível para você.</p>
+              <button type="button" class="btn btn-primary" data-route="contato" style="font-size:1.05rem;padding:0.9rem 2.25rem;">Agendar PoC (Custo Zero)</button>
+            </div>
+          </section>
+
         </article>
 
         <!-- SOBRE -->
         <article data-view="sobre" hidden>
+
+          <!-- HERO -->
           <section class="section section--dark">
             <div class="shell">
-              <h1>Ecovisa</h1>
-              <p>Missão, Visão e Equipe.</p>
+              <h1>Sobre a Ecovisa</h1>
+              <p class="hero-lead">Pragmatismo com inovação para operações reais.</p>
             </div>
           </section>
-          <section class="section">
-            <div class="shell">
-              <h2>Missão</h2>
-              <p>
-                Democratizar a visão computacional para PMEs e órgãos públicos com implementação
-                rápida e foco em ROI.
-              </p>
-              <h2>Visão</h2>
-              <p>
-                Ser o cérebro por trás de cada câmera de segurança nas indústrias e cidades da América
-                Latina.
-              </p>
-              <h2>Equipe</h2>
-              <p>(inserir imagem)</p>
-              <p class="hint">Fotos e bios da equipe — conteúdo a publicar.</p>
+
+          <!-- NOSSA HISTÓRIA -->
+          <section class="section" style="background:#f2f5f5;">
+            <div class="shell shell--narrow">
+              <header class="section-head">
+                <span class="section-head__label">Nossa História</span>
+                <h2 style="color:#012e20;">Fundada em 2023 em Curitiba</h2>
+              </header>
+              <p style="color:#2a4038;line-height:1.8;font-size:1.05rem;margin:0;">Fundada em 2023 em Curitiba, Paraná, a Ecovisa nasceu de uma observação simples: milhares de indústrias e operações no Brasil têm câmeras instaladas que gravam tudo &mdash; mas não geram nenhuma inteligência sobre o que está acontecendo. Saímos da pesquisa acadêmica, entramos no chão de fábrica, conversamos com gestores reais e desenvolvemos uma solução que transforma esse arquivo morto em inteligência ativa &mdash; sem exigir nova infraestrutura.</p>
             </div>
           </section>
+
+          <!-- MISSÃO, VISÃO & VALORES -->
+          <section class="section section--dark">
+            <div class="shell shell--narrow">
+              <header class="section-head">
+                <span class="section-head__label">Por Que Existimos</span>
+                <h2>Missão, Visão &amp; Valores</h2>
+              </header>
+              <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.5rem;margin-bottom:2.5rem;">
+                <div style="padding:1.75rem;border-radius:16px;background:rgba(16,200,126,0.07);border:1px solid rgba(16,200,126,0.2);">
+                  <div style="font-size:1.75rem;margin-bottom:0.75rem;" aria-hidden="true">&#127919;</div>
+                  <h3 style="color:#10c87e;margin-top:0;margin-bottom:0.75rem;font-size:0.85rem;text-transform:uppercase;letter-spacing:0.1em;">Missão</h3>
+                  <p style="color:rgba(242,245,245,0.9);line-height:1.65;margin:0;font-size:0.95rem;">Democratizar inteligência visual para pequenas e médias indústrias &mdash; sem complexidade burocrática e sem projetos que duram meses.</p>
+                </div>
+                <div style="padding:1.75rem;border-radius:16px;background:rgba(16,200,126,0.07);border:1px solid rgba(16,200,126,0.2);">
+                  <div style="font-size:1.75rem;margin-bottom:0.75rem;" aria-hidden="true">&#128270;</div>
+                  <h3 style="color:#10c87e;margin-top:0;margin-bottom:0.75rem;font-size:0.85rem;text-transform:uppercase;letter-spacing:0.1em;">Visão</h3>
+                  <p style="color:rgba(242,245,245,0.9);line-height:1.65;margin:0;font-size:0.95rem;">Ser o olho invisível de cada operação crítica nas indústrias e cidades da América Latina, 24 h por dia, sem fadiga.</p>
+                </div>
+              </div>
+              <h3 style="color:#10c87e;font-size:0.85rem;text-transform:uppercase;letter-spacing:0.1em;margin-bottom:1rem;">Valores</h3>
+              <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:0.75rem;">
+                <div style="padding:1rem 1.25rem;border-radius:10px;background:rgba(16,200,126,0.05);border:1px solid rgba(16,200,126,0.12);">
+                  <strong style="color:#10c87e;display:block;margin-bottom:0.25rem;">Pragmatismo</strong>
+                  <span style="color:rgba(242,245,245,0.8);font-size:0.9rem;line-height:1.5;">Soluções que funcionam na prática, não no papel.</span>
+                </div>
+                <div style="padding:1rem 1.25rem;border-radius:10px;background:rgba(16,200,126,0.05);border:1px solid rgba(16,200,126,0.12);">
+                  <strong style="color:#10c87e;display:block;margin-bottom:0.25rem;">Transparência</strong>
+                  <span style="color:rgba(242,245,245,0.8);font-size:0.9rem;line-height:1.5;">Dados reais, não relatórios vazios.</span>
+                </div>
+                <div style="padding:1rem 1.25rem;border-radius:10px;background:rgba(16,200,126,0.05);border:1px solid rgba(16,200,126,0.12);">
+                  <strong style="color:#10c87e;display:block;margin-bottom:0.25rem;">Parceria</strong>
+                  <span style="color:rgba(242,245,245,0.8);font-size:0.9rem;line-height:1.5;">Sua vitória é nossa vitória.</span>
+                </div>
+                <div style="padding:1rem 1.25rem;border-radius:10px;background:rgba(16,200,126,0.05);border:1px solid rgba(16,200,126,0.12);">
+                  <strong style="color:#10c87e;display:block;margin-bottom:0.25rem;">Inovação</strong>
+                  <span style="color:rgba(242,245,245,0.8);font-size:0.9rem;line-height:1.5;">Sempre evoluindo, nunca estagnado.</span>
+                </div>
+                <div style="padding:1rem 1.25rem;border-radius:10px;background:rgba(16,200,126,0.05);border:1px solid rgba(16,200,126,0.12);">
+                  <strong style="color:#10c87e;display:block;margin-bottom:0.25rem;">Integridade</strong>
+                  <span style="color:rgba(242,245,245,0.8);font-size:0.9rem;line-height:1.5;">Seus dados são seus, sempre.</span>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- O QUE FAZEMOS -->
+          <section class="section" style="background:#f2f5f5;">
+            <div class="shell shell--narrow">
+              <header class="section-head">
+                <span class="section-head__label">O Que Entregamos</span>
+                <h2 style="color:#012e20;">Transformamos Câmeras em Inteligência Operacional</h2>
+              </header>
+              <p style="color:#2a4038;line-height:1.75;margin-bottom:2rem;font-size:1.05rem;">A Ecovisa coloca inteligência artificial para funcionar nas imagens que você já captura. Não vendemos hardware nem licenças genéricas. <strong>Vendemos resultados mensuráveis em 90 dias</strong> &mdash; com suas câmeras, no seu processo, sem risco financeiro.</p>
+              <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.25rem;">
+                <div style="padding:1.75rem;border-radius:16px;background:#fff;border:1px solid rgba(1,46,32,0.08);text-align:center;">
+                  <div class="icon-box icon-box--light" aria-hidden="true" style="margin:0 auto 0.75rem;">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z"/><circle cx="12" cy="13" r="4"/></svg>
+                  </div>
+                  <h3 style="color:#012e20;margin:0 0 0.5rem;font-size:1rem;">Hardware Agnóstico</h3>
+                  <p style="color:#2a4038;font-size:0.9rem;line-height:1.5;margin:0;">Funciona com qualquer câmera IP ou CFTV que você já tem.</p>
+                </div>
+                <div style="padding:1.75rem;border-radius:16px;background:#fff;border:1px solid rgba(1,46,32,0.08);text-align:center;">
+                  <div class="icon-box icon-box--light" aria-hidden="true" style="margin:0 auto 0.75rem;">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18M7 16l4-4 4 4 6-7"/></svg>
+                  </div>
+                  <h3 style="color:#012e20;margin:0 0 0.5rem;font-size:1rem;">ROI Mensurável</h3>
+                  <p style="color:#2a4038;font-size:0.9rem;line-height:1.5;margin:0;">Cada entrega tem uma métrica. Números, não promessas.</p>
+                </div>
+                <div style="padding:1.75rem;border-radius:16px;background:#fff;border:1px solid rgba(1,46,32,0.08);text-align:center;">
+                  <div class="icon-box icon-box--light" aria-hidden="true" style="margin:0 auto 0.75rem;">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                  </div>
+                  <h3 style="color:#012e20;margin:0 0 0.5rem;font-size:1rem;">Implementação Rápida</h3>
+                  <p style="color:#2a4038;font-size:0.9rem;line-height:1.5;margin:0;">PoC de 90 dias. Primeira inteligência ativa em 4 semanas.</p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- POR QUE ECOVISA -->
+          <section class="section section--dark">
+            <div class="shell shell--narrow">
+              <header class="section-head">
+                <span class="section-head__label">Nossos Diferenciais</span>
+                <h2>Por Que Ecovisa?</h2>
+              </header>
+              <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.25rem;">
+                <div style="display:flex;gap:1rem;align-items:flex-start;padding:1.5rem;border-radius:14px;background:rgba(16,200,126,0.07);border:1px solid rgba(16,200,126,0.15);">
+                  <div class="icon-box icon-box--dark" aria-hidden="true">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z"/><circle cx="12" cy="13" r="4"/></svg>
+                  </div>
+                  <div>
+                    <h3 style="color:#10c87e;margin:0 0 0.4rem;font-size:1rem;">Hardware Agnóstico</h3>
+                    <p style="color:rgba(242,245,245,0.85);font-size:0.9rem;line-height:1.5;margin:0;">Usa o que você já tem &mdash; sem trocar nada.</p>
+                  </div>
+                </div>
+                <div style="display:flex;gap:1rem;align-items:flex-start;padding:1.5rem;border-radius:14px;background:rgba(16,200,126,0.07);border:1px solid rgba(16,200,126,0.15);">
+                  <div class="icon-box icon-box--dark" aria-hidden="true">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18M7 16l4-4 4 4 6-7"/></svg>
+                  </div>
+                  <div>
+                    <h3 style="color:#10c87e;margin:0 0 0.4rem;font-size:1rem;">Resultado em Números</h3>
+                    <p style="color:rgba(242,245,245,0.85);font-size:0.9rem;line-height:1.5;margin:0;">Sem promessas. Dados reais, métricas reais.</p>
+                  </div>
+                </div>
+                <div style="display:flex;gap:1rem;align-items:flex-start;padding:1.5rem;border-radius:14px;background:rgba(16,200,126,0.07);border:1px solid rgba(16,200,126,0.15);">
+                  <div class="icon-box icon-box--dark" aria-hidden="true">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                  </div>
+                  <div>
+                    <h3 style="color:#10c87e;margin:0 0 0.4rem;font-size:1rem;">Implementação Rápida</h3>
+                    <p style="color:rgba(242,245,245,0.85);font-size:0.9rem;line-height:1.5;margin:0;">90 dias, primeira inteligência em 4 semanas.</p>
+                  </div>
+                </div>
+                <div style="display:flex;gap:1rem;align-items:flex-start;padding:1.5rem;border-radius:14px;background:rgba(16,200,126,0.07);border:1px solid rgba(16,200,126,0.15);">
+                  <div class="icon-box icon-box--dark" aria-hidden="true">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                  </div>
+                  <div>
+                    <h3 style="color:#10c87e;margin:0 0 0.4rem;font-size:1rem;">Sem Risco Financeiro</h3>
+                    <p style="color:rgba(242,245,245,0.85);font-size:0.9rem;line-height:1.5;margin:0;">PoC custo zero. Você paga só depois de validar.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- CTA FINAL -->
+          <section class="section" style="background:linear-gradient(135deg,#012e20 0%,#011a12 100%);">
+            <div class="shell shell--narrow" style="text-align:center;">
+              <h2 style="color:#fff;margin-bottom:1rem;">Pronto Para Transformar Imagens em Inteligência?</h2>
+              <p style="font-size:1.05rem;line-height:1.75;color:rgba(242,245,245,0.85);margin-bottom:2rem;max-width:44ch;margin-left:auto;margin-right:auto;">Diagnóstico gratuito na semana 1. PoC de 90 dias sem cobrança. Quando você ver o valor, a decisão é fácil.</p>
+              <button type="button" class="btn btn-primary" data-route="contato" style="font-size:1.05rem;padding:0.9rem 2.25rem;">Agendar Diagnóstico Gratuito</button>
+            </div>
+          </section>
+
         </article>
 
         <!-- CONTATO / PoC -->
         <article data-view="contato" class="form-contato" hidden>
+
           <section class="section section--dark">
             <div class="shell">
-              <h1>Agendar PoC</h1>
-              <p>Preencha os campos abaixo para entrarmos em contato.</p>
+              <h1>Agendar Sua PoC</h1>
+              <p style="font-size:1.05rem;color:rgba(242,245,245,0.85);margin:0;">Diagnóstico gratuito, sem compromisso. Vamos conversar sobre sua operação.</p>
             </div>
           </section>
-          <section class="section form">
+
+          <section class="section" style="background:#fff;">
             <div class="shell">
-              <form id="form-contato" class="form" novalidate>
-                <div id="form-feedback" class="form-msg" role="status"></div>
-                <label for="nome">Nome <span aria-hidden="true">*</span></label>
-                <input id="nome" name="nome" type="text" autocomplete="name" required />
+              <div class="contato-grid">
 
-                <label for="empresa">Empresa <span aria-hidden="true">*</span></label>
-                <input id="empresa" name="empresa" type="text" autocomplete="organization" required />
+                <!-- Coluna 1: Formulário -->
+                <div class="contato-form">
+                  <h2>Envie Seus Dados</h2>
+                  <form id="form-contato" class="form" novalidate>
+                    <div id="form-feedback" class="form-msg" role="status"></div>
+                    <label for="nome">Nome <span aria-hidden="true">*</span></label>
+                    <input id="nome" name="nome" type="text" autocomplete="name" required />
 
-                <label for="email">E-mail <span aria-hidden="true">*</span></label>
-                <input id="email" name="email" type="email" autocomplete="email" required />
+                    <label for="empresa">Empresa <span aria-hidden="true">*</span></label>
+                    <input id="empresa" name="empresa" type="text" autocomplete="organization" required />
 
-                <label for="mensagem">Mensagem <span aria-hidden="true">*</span></label>
-                <textarea id="mensagem" name="mensagem" required></textarea>
+                    <label for="email">E-mail <span aria-hidden="true">*</span></label>
+                    <input id="email" name="email" type="email" autocomplete="email" required />
 
-                <button type="submit" class="btn btn-primary">Enviar</button>
-              </form>
+                    <label for="mensagem">Mensagem <span aria-hidden="true">*</span></label>
+                    <textarea id="mensagem" name="mensagem" required></textarea>
+
+                    <button type="submit" class="btn btn-primary">Enviar</button>
+                  </form>
+                </div>
+
+                <!-- Coluna 2: Benefícios -->
+                <div class="contato-visual">
+                  <h2>Por Que Agendar Agora?</h2>
+
+                  <div class="contato-benefit">
+                    <div class="icon-large" aria-hidden="true">
+                      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                    </div>
+                    <div>
+                      <h3>Diagnóstico em 1 Semana</h3>
+                      <p>Mapeamos seus gargalos e oportunidades em uma conversa rápida com seus gestores. Sem custo, sem compromisso.</p>
+                    </div>
+                  </div>
+
+                  <div class="contato-benefit">
+                    <div class="icon-large" aria-hidden="true">
+                      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                    </div>
+                    <div>
+                      <h3>Sem Risco Financeiro</h3>
+                      <p>A PoC é custo zero. Você vê os resultados com dados reais antes de qualquer decisão de contrato.</p>
+                    </div>
+                  </div>
+
+                  <div class="contato-benefit">
+                    <div class="icon-large" aria-hidden="true">
+                      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18M7 16l4-4 4 4 6-7"/></svg>
+                    </div>
+                    <div>
+                      <h3>Resultado em Números</h3>
+                      <p>Ao final da PoC você tem métricas concretas: redução de custo em %, ganho de OEE em %. Não promessas.</p>
+                    </div>
+                  </div>
+
+                </div>
+
+              </div>
             </div>
           </section>
+
         </article>
       </main>
 
@@ -1762,22 +1933,10 @@
         <div class="site-footer__mesh" aria-hidden="true"></div>
         <div class="site-footer__grid" aria-hidden="true"></div>
 
-        <div class="site-footer__cta">
-          <div class="shell site-footer__cta-inner">
-            <div>
-              <p class="site-footer__cta-kicker">Próximo passo</p>
-              <p class="site-footer__cta-title">
-                Da câmera ao insight — valide em até 90 dias com uma PoC guiada.
-              </p>
-            </div>
-            <button type="button" class="btn btn-primary" data-route="contato">Agendar PoC</button>
-          </div>
-        </div>
-
         <div class="shell site-footer__main">
           <div class="site-footer__brand">
             <div style="display: flex; align-items: center; gap: 0.65rem">
-              <span class="logo-placeholder" aria-hidden="true">Ecovisa</span>
+              <img src="imagens/ecovisa logo horizontal fundo verde.png" alt="Ecovisa" class="footer-logo">
             </div>
             <p class="site-footer__brand-tag">
               Visão computacional utilizando a infraestrutura que você já tem.
