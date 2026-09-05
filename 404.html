@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Página não encontrada | Ecovisa</title>
+    <meta name="robots" content="noindex" />
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="stylesheet" href="/css/styles.css" />
+    <style>
+      .not-found {
+        min-height: 70vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 3rem 1.25rem;
+        background: #012e20;
+        color: #f2f5f5;
+        text-align: center;
+      }
+      .not-found h1 {
+        font-family: "Space Grotesk", system-ui, sans-serif;
+        font-size: clamp(1.8rem, 4vw, 2.4rem);
+        margin: 0 0 0.75rem;
+      }
+      .not-found p {
+        margin: 0 0 1.5rem;
+        color: rgba(242, 245, 245, 0.85);
+        line-height: 1.6;
+      }
+      .not-found a {
+        color: #10c87e;
+      }
+      .not-found .actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.75rem;
+        justify-content: center;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="not-found">
+      <div>
+        <p class="kicker" style="color: #10c87e">Erro 404</p>
+        <h1>Esta página não existe</h1>
+        <p>
+          O endereço que você pediu não foi encontrado.<br />
+          Volte ao início ou consulte o mapa do site.
+        </p>
+        <div class="actions">
+          <a class="btn btn-primary" href="/">Ir para o início</a>
+          <a class="btn" href="/sitemap.xml" style="color: #10c87e; border: 1px solid rgba(16, 200, 126, 0.4); padding: 0.7rem 1.2rem; border-radius: 10px; text-decoration: none;">sitemap.xml</a>
+          <a class="btn" href="/llms.txt" style="color: #10c87e; border: 1px solid rgba(16, 200, 126, 0.4); padding: 0.7rem 1.2rem; border-radius: 10px; text-decoration: none;">llms.txt</a>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

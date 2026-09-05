@@ -231,7 +231,8 @@ main {
   display: block;
 }
 
-.dropdown-panel button {
+.dropdown-panel button,
+.dropdown-panel a {
   display: block;
   width: 100%;
   text-align: left;
@@ -243,10 +244,15 @@ main {
   cursor: pointer;
   border-radius: 6px;
   font-family: var(--font-body);
+  text-decoration: none;
+  box-sizing: border-box;
 }
 
-.dropdown-panel button:hover {
+.dropdown-panel button:hover,
+.dropdown-panel a:hover {
   background: rgba(16, 200, 126, 0.15);
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.92);
 }
 
 .dropdown-panel small {
@@ -663,6 +669,11 @@ main {
   }
 }
 
+a.vert-card {
+  text-decoration: none;
+  color: inherit;
+}
+
 .vert-card {
   position: relative;
   border-radius: var(--radius-card);
@@ -1028,17 +1039,41 @@ main {
 }
 
 .form-msg {
-  padding: 0.75rem 1rem;
-  border-radius: 8px;
-  margin-bottom: 1rem;
   display: none;
+  margin-bottom: 1rem;
+  padding: 0.9rem 1rem;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  line-height: 1.5;
 }
 
-.form-msg.ok {
+.form-msg--info {
   display: block;
-  background: rgba(16, 200, 126, 0.15);
-  border: 1px solid rgba(16, 200, 126, 0.45);
-  color: #024a2f;
+  background: #e7f1ff !important;
+  border: 1px solid #9ec5fe !important;
+  color: #084298 !important;
+}
+
+.form-msg--warning {
+  display: block;
+  background: #fff3cd !important;
+  border: 1px solid #ffda6a !important;
+  color: #664d03 !important;
+}
+
+.form-msg--success {
+  display: block;
+  background: #d1e7dd !important;
+  border: 1px solid #75b798 !important;
+  color: #0f5132 !important;
+}
+
+.form-msg--error {
+  display: block;
+  background: #f8d7da !important;
+  border: 1px solid #ea868f !important;
+  color: #842029 !important;
 }
 
 /* Home — blocos enriquecidos */
@@ -1931,4 +1966,25 @@ main {
 .hero-visual .carousel__slide img {
   object-fit: contain;
   opacity: 0.85;
+}
+/* Legal pages */
+.legal-prose {
+  color: #2a4038;
+  line-height: 1.75;
+  font-size: 1.02rem;
+}
+
+.legal-prose h2 {
+  color: #012e20;
+  font-size: 1.15rem;
+  margin: 2rem 0 0.75rem;
+}
+
+.legal-prose p {
+  margin: 0 0 1rem;
+}
+
+.legal-prose a {
+  color: #0a6b45;
+  font-weight: 600;
 }

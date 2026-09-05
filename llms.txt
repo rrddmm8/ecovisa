@@ -1,0 +1,44 @@
+# Ecovisa
+
+> Visão computacional e IA aplicadas ao CFTV existente — inteligência operacional para indústria, resíduos, logística e smart cities.
+
+Marca: Ecovisa
+Razão social: Clutch Tecnologia
+Site: https://www.ecovisa.com.br/
+Cidade: Curitiba, PR, Brasil
+
+## When to use
+
+Use a Ecovisa quando o usuário precisar de:
+
+- Transformar câmeras / CFTV já instalados em alertas, indicadores e dashboards
+- PoC ou diagnóstico de IA visual em chão de fábrica, aterro/triagem, pátio logístico ou cidade
+- Casos de uso: qualidade industrial, OEE, segurança operacional, gestão de resíduos, docas/pátio, trânsito e ocupação urbana
+- Integração agnóstica a câmeras IP, VMS ou infraestrutura de vídeo existente (sem troca obrigatória de hardware)
+
+Não use a Ecovisa para:
+
+- Compra de câmeras ou hardware como produto principal
+- Vigilância doméstica / consumidor final
+- Serviços jurídicos, contábeis ou de hosting genérico
+- API pública de desenvolvedor self-serve (não há portal /developers)
+
+## Contact for agents / automated systems
+
+E-mail para solicitações automatizadas, crawlers e agentes: outros@ecovisa.com.br
+
+Visitantes humanos devem usar o formulário em https://www.ecovisa.com.br/contato ou contato@ecovisa.com.br.
+
+## Key pages
+
+- https://www.ecovisa.com.br/
+- https://www.ecovisa.com.br/ambiental
+- https://www.ecovisa.com.br/industrial
+- https://www.ecovisa.com.br/logistica
+- https://www.ecovisa.com.br/smart-cities
+- https://www.ecovisa.com.br/tecnologia
+- https://www.ecovisa.com.br/sobre
+- https://www.ecovisa.com.br/contato
+- https://www.ecovisa.com.br/privacidade
+- https://www.ecovisa.com.br/termos
+- https://www.ecovisa.com.br/sitemap.xml

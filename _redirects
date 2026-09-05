@@ -1,0 +1,13 @@
+/ambiental      /index.html  200
+/industrial     /index.html  200
+/logistica      /index.html  200
+/smart-cities   /index.html  200
+/tecnologia     /index.html  200
+/sobre          /index.html  200
+/contato        /index.html  200
+/privacidade    /index.html  200
+/termos         /index.html  200
+/about          /sobre       301
+/contact        /contato     301
+/privacy        /privacidade 301
+/terms          /termos      301
